@@ -71,11 +71,13 @@ h2.masterH2 {
     width: 100%;
     text-align: center;
     background-color: #ffffff;
+    border-radius: 10px;
     border-radius: 0; /* SIN bordes redondeados - CUADRADO */
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
+/* ===== Encabezados Principales (Verde Oscuro Corporativo) ===== */
 /* ===== Encabezados Principales (Verde Oscuro Corporativo - CUADRADOS) ===== */
 th.headerCell {
     padding: 12px 8px;
@@ -84,65 +86,67 @@ th.headerCell {
     text-align: center;
     font-weight: 600;
     font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
+@@ -88,76 +89,102 @@
     background: linear-gradient(180deg, #205C40 0%, #1a4731 100%) !important;
     color: #FFFFFF !important;
     transition: all 0.2s ease;
+}
+
+th.headerCell:first-child {
+    border-top-left-radius: 10px;
     border-radius: 0; /* CUADRADO */
 }
 
 th.headerCell:last-child {
+    border-top-right-radius: 10px;
     border-right: none;
 }
 
+/* ===== Encabezados de Dimensiones (Verde Medio) ===== */
 /* ===== Encabezados de Dimensiones (Verde Medio - CENTRADO) ===== */
 .headerCell.dimension,
 .indexCell.transposed.dimension {
     background: linear-gradient(180deg, #64A70B 0%, #52880a 100%);
     color: #FFFFFF;
+    text-align: center;
     text-align: center !important; /* FORZAR CENTRADO */
     font-weight: 600;
     border-radius: 0; /* CUADRADO */
 }
 
+/* ===== Encabezados de Medidas (Verde Medio) ===== */
 /* ===== Encabezados de Medidas (Verde Medio - CENTRADO) ===== */
 .headerCell.measure,
 .indexCell.transposed.measure {
     background: linear-gradient(180deg, #64A70B 0%, #52880a 100%);
     color: #FFFFFF;
+    text-align: center;
     text-align: center !important; /* FORZAR CENTRADO */
     font-weight: 600;
     border-radius: 0; /* CUADRADO */
-}
-
-/* Solo la PRIMERA columna de measures tiene espaciado */
-.headerCell.measure:first-of-type,
-.indexCell.transposed.measure:first-of-type {
     border-left: 8px solid #f8fafc; /* ESPACIADO entre dimensiones y measures */
 }
 
+/* ===== Encabezados de Cálculos (Verde Medio) ===== */
 /* ===== Encabezados de Cálculos (Verde Medio - CENTRADO) ===== */
 .headerCell.calculation,
 .indexCell.transposed.calculation {
     background: linear-gradient(180deg, #64A70B 0%, #52880a 100%);
     color: #FFFFFF;
+    text-align: center;
     text-align: center !important; /* FORZAR CENTRADO */
     font-weight: 600;
     border-radius: 0; /* CUADRADO */
-}
-
-/* Solo la PRIMERA columna de cálculos tiene espaciado */
-.headerCell.calculation:first-of-type,
-.indexCell.transposed.calculation:first-of-type {
     border-left: 8px solid #f8fafc; /* ESPACIADO entre dimensiones y cálculos */
 }
 
+/* ===== Encabezados Pivot (Verde Medio) ===== */
 /* ===== Encabezados Pivot (Verde Medio - CENTRADO) ===== */
 .headerCell.pivot,
 .indexCell.transposed.pivot {
     background: linear-gradient(180deg, #64A70B 0%, #52880a 100%);
     color: #FFFFFF;
+    text-align: center;
     text-align: center !important; /* FORZAR CENTRADO */
     font-weight: 600;
     border-radius: 0; /* CUADRADO */
@@ -161,19 +165,19 @@ th.headerCell:last-child {
     transition: background-color 0.15s ease;
 }
 
+/* ===== Celdas de Índice ===== */
 .rowCell:last-child {
     border-right: none;
 }
 
 /* ===== Espaciado entre Dimensiones y Measures en celdas de datos ===== */
-/* Solo la PRIMERA celda de cada grupo tiene el espaciado */
-.rowCell.measure:first-of-type,
-.numeric.measure:first-of-type {
+.rowCell.measure,
+.numeric.measure {
     border-left: 8px solid #f8fafc; /* ESPACIADO vertical en columnas de measures */
 }
 
-.rowCell.calculation:first-of-type,
-.numeric.calculation:first-of-type {
+.rowCell.calculation,
+.numeric.calculation {
     border-left: 8px solid #f8fafc; /* ESPACIADO vertical en columnas de cálculos */
 }
 
@@ -185,6 +189,8 @@ th.headerCell:last-child {
     border-right: 1px solid #f1f5f9;
     background-color: #ffffff;
     color: #2d3748;
+    text-align: left;
+    padding-left: 16px;
     text-align: center !important; /* CENTRADO para dimensiones */
     font-weight: 500;
 }
@@ -199,83 +205,21 @@ th.headerCell:last-child {
 /* ===== Celdas Fusionadas ===== */
 .rowCell.merged, .indexCell.transposed.merged {
     background-color: #f7fafc !important;
-    color: #4a5568 !important;
-}
-
-/* ===== Valores Negativos (Ejecutivo) ===== */
-.negative {
-    color: #A6093D;
-    font-weight: 600;
-}
-
-/* ===== Estimaciones ===== */
-.estimate {
-    color: #718096 !important;
-    font-style: italic;
-}
-
-/* ===== Índice Simple ===== */
-.singleIndex {
-    padding-left: 24px !important;
-}
-
-/* ===== Subtotales (Estilo Ejecutivo) ===== */
-.subtotal {
-    font-style: normal;
-    font-weight: 600;
-    background-color: #edf2f7;
-    color: #2d3748;
-    border-top: 1px solid #cbd5e0;
-    border-bottom: 1px solid #cbd5e0;
-}
-
-/* ===== Totales (Destacados) ===== */
-.total {
-    border-top: 2px solid #205C40 !important;
-    font-weight: 700 !important;
-    background-color: #f0fdf4;
-    color: #1a4731;
-    font-size: 13px;
-}
-
-.total.transposed {
-    border-top: 0px !important;
-    border-left: 3px solid #205C40 !important;
-    background-color: #f0fdf4;
-}
-
-/* ===== Hover Ejecutivo ===== */
-.reportTable tbody tr:hover .rowCell,
-.reportTable tbody tr:hover .indexCell {
-    background-color: #f7fafc !important;
-}
-
-.hover {
-    background-color: #f7fafc !important;
-}
-
-/* ===== Filas Alternadas (Sutil) ===== */
-.reportTable tbody tr:nth-child(even) .rowCell,
-.reportTable tbody tr:nth-child(even) .indexCell {
-    background-color: #fafbfc;
-}
-
-/* ===== Elementos Animados ===== */
-.rectElem.animated {
-    margin: 4px;
-    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    transition: all 0.3s ease;
-}
-
-/* ===== Alineación de Números ===== */
-.numeric {
-    text-align: right;
-    font-family: 'Inter', monospace;
-    font-variant-numeric: tabular-nums;
-    font-weight: 500;
+@@ -238,42 +265,32 @@
 }
 
 .nonNumeric {
+    text-align: left;
+}
+
+/* ===== Bordes Redondeados en Primera y Última Fila ===== */
+.reportTable tbody tr:last-child .rowCell:first-child,
+.reportTable tbody tr:last-child .indexCell:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+.reportTable tbody tr:last-child .rowCell:last-child {
+    border-bottom-right-radius: 10px;
     text-align: center; /* Centrado por defecto */
 }
 
