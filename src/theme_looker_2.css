@@ -161,14 +161,9 @@ th.headerCell {
     color: #000000;
 }
 
-/* ===== Hover (Amarillo Claro) ===== */
-.hover {
-    background-color: #ffffbb !important;
-}
-
-/* Aplica hover automático a filas y celdas */
-.reportTable tr:hover td,
-.reportTable tr:hover th {
+/* ===== Hover (Amarillo Claro) solo para filas normales ===== */
+.reportTable tr:not(.subtotal):not(.total):hover td,
+.reportTable tr:not(.subtotal):not(.total):hover th {
     background-color: #ffffbb !important;
     cursor: pointer;
 }
