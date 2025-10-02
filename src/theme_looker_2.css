@@ -58,60 +58,63 @@ th.headerCell {
     border-bottom: 1px solid #d3d3d3;
     text-align: center;
     font-weight: bold;
-    background-color: #205C40 !important; /* Verde oscuro para headers principales */
+    background-color: #205C40 !important; /* Verde oscuro */
     color: #FFFFFF !important;
 }
 
-/* ===== Encabezados de Dimensiones (Verde Claro) ===== */
+/* ===== Encabezados de Dimensiones (Verde Claro, alineados a la izquierda) ===== */
 .headerCell.dimension,
 .indexCell.transposed.dimension {
-    background-color: #64A70B; /* Verde claro para dimensiones */
+    background-color: #64A70B; /* Verde claro */
     color: #FFFFFF;
-    text-align: center; /* Centrado */
+    text-align: left; /* Alineado a la izquierda */
+    padding-left: 10px; /* Espacio interno */
 }
 
-/* ===== Encabezados de Medidas (Verde Claro) ===== */
+/* ===== Encabezados de Medidas (Verde Claro, con separación) ===== */
 .headerCell.measure,
 .indexCell.transposed.measure {
-    background-color: #64A70B; /* Verde claro para medidas */
+    background-color: #64A70B;
     color: #FFFFFF;
-    text-align: center; /* Centrado */
+    text-align: center;
+    padding: 5px 10px; /* Espaciado uniforme */
+    border-left: 4px solid #F7F7F7; /* Separación visual entre medidas */
 }
 
 /* ===== Encabezados de Cálculos (Verde Claro) ===== */
 .headerCell.calculation,
 .indexCell.transposed.calculation {
-    background-color: #64A70B; /* Verde claro para cálculos */
+    background-color: #64A70B;
     color: #FFFFFF;
-    text-align: center; /* Centrado */
+    text-align: center;
 }
 
 /* ===== Encabezados Pivot (Verde Claro) ===== */
 .headerCell.pivot,
 .indexCell.transposed.pivot {
-    background-color: #64A70B; /* Verde claro para pivots */
+    background-color: #64A70B;
     color: #FFFFFF;
-    text-align: center; /* Centrado */
+    text-align: center;
 }
 
-/* ===== Celdas de Datos (Fondo Blanco/Transparente) ===== */
+/* ===== Celdas de Datos (Fondo Blanco) ===== */
 .rowCell, .numeric, .nonNumeric {
     vertical-align: middle;
     padding: 5px;
     border-bottom: 1px solid #d3d3d3;
     text-align: center;
-    background-color: #FFFFFF; /* Fondo blanco para celdas de datos */
+    background-color: #FFFFFF;
     color: #7a7a7a;
 }
 
-/* ===== Celdas de Índice (Fondo Blanco) ===== */
+/* ===== Celdas de Índice (Fondo Blanco, alineadas) ===== */
 .indexCell {
     vertical-align: middle;
     padding: 5px;
     border-bottom: 1px solid #d3d3d3;
     background-color: #FFFFFF;
     color: #7a7a7a;
-    text-align: center; /* Índices alineados a la izquierda */
+    text-align: left; /* Alineado a la izquierda */
     padding-left: 15px;
 }
 
@@ -123,7 +126,7 @@ th.headerCell {
 
 /* ===== Valores Negativos ===== */
 .negative {
-    color: #A6093D; /* Rojo para negativos */
+    color: #A6093D; /* Rojo */
 }
 
 /* ===== Estimaciones ===== */
@@ -157,7 +160,7 @@ th.headerCell {
     background-color: #d3d3d3;
 }
 
-/* ===== Hover (Gris Claro) ===== */
+/* ===== Hover ===== */
 .hover {
     background-color: #E8E8E8 !important; /* Gris claro al pasar mouse */
 }
