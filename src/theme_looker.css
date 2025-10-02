@@ -103,7 +103,7 @@ th.headerCell {
     vertical-align: middle;
     padding: 5px;
     border-bottom: 1px solid #d3d3d3;
-    text-align: center !important;
+    text-align: center;
     background-color: #FFFFFF; /* Fondo blanco para celdas de datos */
     color: #7a7a7a;
 }
@@ -111,14 +111,11 @@ th.headerCell {
 /* ===== Celdas de Índice (Fondo Blanco) ===== */
 .indexCell {
     vertical-align: middle;
-    padding: 5px 10px;
+    padding: 5px;
     border-bottom: 1px solid #d3d3d3;
-    text-align: left !important;
+    text-align: center;
     background-color: #FFFFFF;
     color: #7a7a7a;
-    width: auto !important;
-    min-width: 120px !important;
-    max-width: 200px !important;
 }
 
 /* ===== Celdas Fusionadas ===== */
