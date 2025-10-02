@@ -143,7 +143,7 @@ th.headerCell {
 .subtotal {
     font-style: italic;
     font-weight: bold;
-    background-color: #d3d3d3; /* Gris */
+    background-color: #d3d3d3;
     color: #000000;
 }
 
@@ -151,19 +151,23 @@ th.headerCell {
 .total {
     border-top: 2px solid #000000 !important;
     font-weight: bold !important;
-    background-color: #ffc800; /* Amarillo */
+    background-color: #F7F7F7;
     color: #000000;
 }
 
 .total.transposed {
     border-top: 0px !important;
-    background-color: #ffc800; /* Amarillo */
-    color: #000000;
+    background-color: #d3d3d3;
 }
 
-/* ===== Hover (Amarillo Claro) solo para filas normales ===== */
-.reportTable tr:not(.subtotal):not(.total):hover td,
-.reportTable tr:not(.subtotal):not(.total):hover th {
+/* ===== Hover (Amarillo Claro) ===== */
+.hover {
+    background-color: #ffffbb !important;
+}
+
+/* Aplica hover automático a filas y celdas */
+.reportTable tr:hover td,
+.reportTable tr:hover th {
     background-color: #ffffbb !important;
     cursor: pointer;
 }
