@@ -71,15 +71,16 @@ h2.masterH2 {
     width: 100%;
     text-align: center;
     background-color: #ffffff;
-    border-radius: 10px;
+    border-radius: 0; /* SIN bordes redondeados - CUADRADO */
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
-/* ===== Encabezados Principales (Verde Oscuro Corporativo) ===== */
+/* ===== Encabezados Principales (Verde Oscuro Corporativo - CUADRADOS) ===== */
 th.headerCell {
     padding: 12px 8px;
     border-bottom: 2px solid #1a4731;
+    border-right: 1px solid #1a4731; /* Separador entre headers */
     text-align: center;
     font-weight: 600;
     font-size: 11px;
@@ -88,50 +89,53 @@ th.headerCell {
     background: linear-gradient(180deg, #205C40 0%, #1a4731 100%) !important;
     color: #FFFFFF !important;
     transition: all 0.2s ease;
-}
-
-th.headerCell:first-child {
-    border-top-left-radius: 10px;
+    border-radius: 0; /* CUADRADO */
 }
 
 th.headerCell:last-child {
-    border-top-right-radius: 10px;
+    border-right: none;
 }
 
-/* ===== Encabezados de Dimensiones (Verde Medio) ===== */
+/* ===== Encabezados de Dimensiones (Verde Medio - CENTRADO) ===== */
 .headerCell.dimension,
 .indexCell.transposed.dimension {
     background: linear-gradient(180deg, #64A70B 0%, #52880a 100%);
     color: #FFFFFF;
-    text-align: center;
+    text-align: center !important; /* FORZAR CENTRADO */
     font-weight: 600;
+    border-radius: 0; /* CUADRADO */
 }
 
-/* ===== Encabezados de Medidas (Verde Medio) ===== */
+/* ===== Encabezados de Medidas (Verde Medio - CENTRADO) ===== */
 .headerCell.measure,
 .indexCell.transposed.measure {
     background: linear-gradient(180deg, #64A70B 0%, #52880a 100%);
     color: #FFFFFF;
-    text-align: center;
+    text-align: center !important; /* FORZAR CENTRADO */
     font-weight: 600;
+    border-radius: 0; /* CUADRADO */
+    border-left: 8px solid #f8fafc; /* ESPACIADO entre dimensiones y measures */
 }
 
-/* ===== Encabezados de Cálculos (Verde Medio) ===== */
+/* ===== Encabezados de Cálculos (Verde Medio - CENTRADO) ===== */
 .headerCell.calculation,
 .indexCell.transposed.calculation {
     background: linear-gradient(180deg, #64A70B 0%, #52880a 100%);
     color: #FFFFFF;
-    text-align: center;
+    text-align: center !important; /* FORZAR CENTRADO */
     font-weight: 600;
+    border-radius: 0; /* CUADRADO */
+    border-left: 8px solid #f8fafc; /* ESPACIADO entre dimensiones y cálculos */
 }
 
-/* ===== Encabezados Pivot (Verde Medio) ===== */
+/* ===== Encabezados Pivot (Verde Medio - CENTRADO) ===== */
 .headerCell.pivot,
 .indexCell.transposed.pivot {
     background: linear-gradient(180deg, #64A70B 0%, #52880a 100%);
     color: #FFFFFF;
-    text-align: center;
+    text-align: center !important; /* FORZAR CENTRADO */
     font-weight: 600;
+    border-radius: 0; /* CUADRADO */
 }
 
 /* ===== Celdas de Datos (Limpias y Profesionales) ===== */
@@ -139,6 +143,7 @@ th.headerCell:last-child {
     vertical-align: middle;
     padding: 10px 8px;
     border-bottom: 1px solid #e2e8f0;
+    border-right: 1px solid #f1f5f9;
     text-align: center;
     background-color: #ffffff;
     color: #2d3748;
@@ -146,17 +151,39 @@ th.headerCell:last-child {
     transition: background-color 0.15s ease;
 }
 
-/* ===== Celdas de Índice ===== */
+.rowCell:last-child {
+    border-right: none;
+}
+
+/* ===== Espaciado entre Dimensiones y Measures en celdas de datos ===== */
+.rowCell.measure,
+.numeric.measure {
+    border-left: 8px solid #f8fafc; /* ESPACIADO vertical en columnas de measures */
+}
+
+.rowCell.calculation,
+.numeric.calculation {
+    border-left: 8px solid #f8fafc; /* ESPACIADO vertical en columnas de cálculos */
+}
+
+/* ===== Celdas de Índice (Dimensiones - CENTRADAS) ===== */
 .indexCell {
     vertical-align: middle;
     padding: 10px 8px;
     border-bottom: 1px solid #e2e8f0;
+    border-right: 1px solid #f1f5f9;
     background-color: #ffffff;
     color: #2d3748;
-    text-align: left;
-    padding-left: 16px;
+    text-align: center !important; /* CENTRADO para dimensiones */
     font-weight: 500;
 }
+
+/* Si quieres que las dimensiones de las filas estén a la izquierda, usa esta versión:
+.indexCell.dimension {
+    text-align: left !important;
+    padding-left: 16px;
+}
+*/
 
 /* ===== Celdas Fusionadas ===== */
 .rowCell.merged, .indexCell.transposed.merged {
@@ -238,17 +265,7 @@ th.headerCell:last-child {
 }
 
 .nonNumeric {
-    text-align: left;
-}
-
-/* ===== Bordes Redondeados en Primera y Última Fila ===== */
-.reportTable tbody tr:last-child .rowCell:first-child,
-.reportTable tbody tr:last-child .indexCell:first-child {
-    border-bottom-left-radius: 10px;
-}
-
-.reportTable tbody tr:last-child .rowCell:last-child {
-    border-bottom-right-radius: 10px;
+    text-align: center; /* Centrado por defecto */
 }
 
 /* ===== Estados de Focus (Accesibilidad) ===== */
