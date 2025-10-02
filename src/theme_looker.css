@@ -155,11 +155,13 @@ th.headerCell:last-child {
     transition: background-color 0.15s ease;
 }
 
-/* ===== Indicadores de Tendencia SOLO para Porcentajes ===== */
+/* ===== Indicadores de Tendencia Automáticos con CSS ===== */
 
-/* Flecha verde hacia arriba para porcentajes positivos */
-.percentage.positive::after,
-.percentage[data-value^="+"]::after {
+/* Detectar valores positivos y agregar flecha verde hacia arriba */
+.rowCell[data-value^="+"]::after,
+.rowCell.positive::after,
+.numeric[data-value^="+"]::after,
+.numeric.positive::after {
     content: "";
     display: inline-block;
     width: 0;
@@ -171,9 +173,11 @@ th.headerCell:last-child {
     vertical-align: middle;
 }
 
-/* Flecha roja hacia abajo para porcentajes negativos */
-.percentage.negative::after,
-.percentage[data-value^="-"]::after {
+/* Detectar valores negativos y agregar flecha roja hacia abajo */
+.rowCell[data-value^="-"]::after,
+.rowCell.negative::after,
+.numeric[data-value^="-"]::after,
+.numeric.negative::after {
     content: "";
     display: inline-block;
     width: 0;
@@ -185,24 +189,55 @@ th.headerCell:last-child {
     vertical-align: middle;
 }
 
-/* Color verde para porcentajes positivos */
-.percentage.positive,
-.percentage[data-value^="+"] {
+/* Colorear texto de valores positivos */
+.rowCell[data-value^="+"],
+.rowCell.positive,
+.numeric[data-value^="+"],
+.numeric.positive {
     color: #059669 !important;
     font-weight: 600;
 }
 
-/* Color rojo para porcentajes negativos */
-.percentage.negative,
-.percentage[data-value^="-"] {
+/* Colorear texto de valores negativos */
+.rowCell[data-value^="-"],
+.rowCell.negative,
+.numeric[data-value^="-"],
+.numeric.negative {
     color: #dc2626 !important;
     font-weight: 600;
 }
 
-/* Valores neutrales en porcentajes */
-.percentage.neutral {
+/* Valores neutrales */
+.rowCell.neutral,
+.numeric.neutral {
     color: #6b7280;
     font-weight: 500;
+}
+
+/* Flecha verde para porcentajes positivos */
+.percentage.positive::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 6px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 6px solid #10b981;
+    vertical-align: middle;
+}
+
+/* Flecha roja para porcentajes negativos */
+.percentage.negative::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 6px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid #ef4444;
+    vertical-align: middle;
 }
 
 /* ===== Celdas de Índice ===== */
