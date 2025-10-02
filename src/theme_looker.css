@@ -1,75 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap');
 
-/* Estilos base del body para demo */
+/* ===== Tipografía Base ===== */
 body {
-  background: linear-gradient(135deg, #0a0e27 0%, #1a1535 50%, #0f0a1e 100%);
-  padding: 40px;
-  min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: #4a5568;
+    background-color: #f8fafc;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 30%, rgba(138, 43, 226, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(0, 255, 255, 0.1) 0%, transparent 50%);
-  pointer-events: none;
-  animation: pulse 8s ease-in-out infinite;
+h1.masterH1 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #205C40;
+    text-align: center;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
 }
 
-@keyframes pulse {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 1; }
+h2.masterH2 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #64A70B;
+    text-align: center;
+    letter-spacing: -0.3px;
+    margin-bottom: 6px;
 }
 
-/* TOOLTIP STYLES */
+.masterHeader {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    color: #205C40;
+    letter-spacing: -0.2px;
+}
+
+/* ===== Tooltip Ejecutivo ===== */
 #tooltip {
     position: absolute;
-    width: auto;
-    height: auto;
-    padding: 15px 20px;
-    background: linear-gradient(135deg, rgba(20, 20, 40, 0.98) 0%, rgba(30, 15, 50, 0.98) 100%);
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    border: 2px solid;
-    border-image: linear-gradient(135deg, #00ffff, #ff00ff, #00ffff) 1;
-    box-shadow: 
-      0 0 20px rgba(0, 255, 255, 0.3),
-      0 0 40px rgba(255, 0, 255, 0.2),
-      inset 0 0 20px rgba(0, 255, 255, 0.1);
+    padding: 12px 16px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08);
     pointer-events: none;
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 14px;
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: #1a202c;
     z-index: 1000;
-    color: #00ffff;
-    transform: scale(0.9);
-    opacity: 0;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-#tooltip:not(.hidden) {
-  transform: scale(1);
-  opacity: 1;
-}
-
-#tooltip::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(135deg, #00ffff, #ff00ff);
-  border-radius: 12px;
-  z-index: -1;
-  opacity: 0.3;
-  filter: blur(8px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 #tooltip.hidden {
@@ -77,259 +55,225 @@ body::before {
 }
 
 #tooltip p {
-    margin: 8px 0;
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 14px;
-    line-height: 20px;
-    color: #ffffff;
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    margin: 4px 0;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #4a5568;
 }
 
-/* TABLA PRINCIPAL */
+/* ===== Tabla Principal Ejecutiva ===== */
 .reportTable {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 13px;
-  border: 2px solid rgba(0, 255, 255, 0.3);
-  border-collapse: separate;
-  border-spacing: 0;
-  background: rgba(10, 10, 30, 0.6);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 
-    0 0 30px rgba(0, 255, 255, 0.2),
-    0 0 60px rgba(255, 0, 255, 0.1);
-  position: relative;
-  animation: tableGlow 3s ease-in-out infinite;
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #4a5568;
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
-@keyframes tableGlow {
-  0%, 100% {
-    box-shadow: 
-      0 0 30px rgba(0, 255, 255, 0.2),
-      0 0 60px rgba(255, 0, 255, 0.1);
-  }
-  50% {
-    box-shadow: 
-      0 0 40px rgba(0, 255, 255, 0.4),
-      0 0 80px rgba(255, 0, 255, 0.2);
-  }
+/* ===== Encabezados Principales (Verde Oscuro Corporativo) ===== */
+th.headerCell {
+    padding: 12px 8px;
+    border-bottom: 2px solid #1a4731;
+    text-align: center;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    background: linear-gradient(180deg, #205C40 0%, #1a4731 100%) !important;
+    color: #FFFFFF !important;
+    transition: all 0.2s ease;
 }
 
-.reportTable::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
-  animation: shimmer 3s infinite;
+th.headerCell:first-child {
+    border-top-left-radius: 10px;
 }
 
-@keyframes shimmer {
-  0% { left: -100%; }
-  100% { left: 100%; }
+th.headerCell:last-child {
+    border-top-right-radius: 10px;
 }
 
-/* ENCABEZADOS */
-.reportTable th {
-  color: #00ffff;
-  background: linear-gradient(135deg, rgba(30, 30, 60, 0.9) 0%, rgba(40, 20, 70, 0.9) 100%);
-  border: 1px solid rgba(0, 255, 255, 0.2);
-  border-bottom: 2px solid rgba(0, 255, 255, 0.5) !important;
-  padding: 15px 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 11px;
-  font-family: 'Orbitron', sans-serif;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
-  position: relative;
-  transition: all 0.3s ease;
+/* ===== Encabezados de Dimensiones (Verde Medio) ===== */
+.headerCell.dimension,
+.indexCell.transposed.dimension {
+    background: linear-gradient(180deg, #64A70B 0%, #52880a 100%);
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: 600;
 }
 
-.reportTable th::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #00ffff, transparent);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+/* ===== Encabezados de Medidas (Verde Medio) ===== */
+.headerCell.measure,
+.indexCell.transposed.measure {
+    background: linear-gradient(180deg, #64A70B 0%, #52880a 100%);
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: 600;
 }
 
-.reportTable th:hover::before {
-  opacity: 1;
+/* ===== Encabezados de Cálculos (Verde Medio) ===== */
+.headerCell.calculation,
+.indexCell.transposed.calculation {
+    background: linear-gradient(180deg, #64A70B 0%, #52880a 100%);
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: 600;
 }
 
-/* CELDAS DE DATOS */
-.reportTable td {
-  color: #e0e0ff;
-  vertical-align: middle;
-  padding: 12px 10px;
-  border: 1px solid rgba(100, 100, 200, 0.15);
-  background: rgba(15, 15, 35, 0.4);
-  transition: all 0.3s ease;
-  position: relative;
+/* ===== Encabezados Pivot (Verde Medio) ===== */
+.headerCell.pivot,
+.indexCell.transposed.pivot {
+    background: linear-gradient(180deg, #64A70B 0%, #52880a 100%);
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: 600;
 }
 
-.reportTable tr:hover td {
-  background: rgba(0, 255, 255, 0.05);
-  box-shadow: inset 0 0 20px rgba(0, 255, 255, 0.1);
+/* ===== Celdas de Datos (Limpias y Profesionales) ===== */
+.rowCell, .numeric, .nonNumeric {
+    vertical-align: middle;
+    padding: 10px 8px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: center;
+    background-color: #ffffff;
+    color: #2d3748;
+    font-size: 12px;
+    transition: background-color 0.15s ease;
 }
 
-.reportTable td::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: linear-gradient(180deg, #00ffff, #ff00ff);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+/* ===== Celdas de Índice ===== */
+.indexCell {
+    vertical-align: middle;
+    padding: 10px 8px;
+    border-bottom: 1px solid #e2e8f0;
+    background-color: #ffffff;
+    color: #2d3748;
+    text-align: left;
+    padding-left: 16px;
+    font-weight: 500;
 }
 
-.reportTable tr:hover td::before {
-  opacity: 1;
+/* ===== Celdas Fusionadas ===== */
+.rowCell.merged, .indexCell.transposed.merged {
+    background-color: #f7fafc !important;
+    color: #4a5568 !important;
 }
 
-/* ALINEACIÓN */
-.left {
-  text-align: left;
+/* ===== Valores Negativos (Ejecutivo) ===== */
+.negative {
+    color: #A6093D;
+    font-weight: 600;
 }
 
-.right {
-  text-align: right !important;
-  font-family: 'Orbitron', monospace;
-  font-weight: 600;
+/* ===== Estimaciones ===== */
+.estimate {
+    color: #718096 !important;
+    font-style: italic;
 }
 
-/* INDENTACIÓN */
-.indent {
-  padding-left: 25px !important;
-  position: relative;
+/* ===== Índice Simple ===== */
+.singleIndex {
+    padding-left: 24px !important;
 }
 
-.indent::before {
-  content: '▸';
-  position: absolute;
-  left: 10px;
-  color: #00ffff;
-  font-size: 10px;
-  animation: blink 1.5s infinite;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
-}
-
-/* SUBTOTALES */
+/* ===== Subtotales (Estilo Ejecutivo) ===== */
 .subtotal {
-  font-style: normal;
-  font-weight: 700;
-  background: linear-gradient(135deg, rgba(138, 43, 226, 0.3) 0%, rgba(75, 0, 130, 0.3) 100%) !important;
-  border-left: 3px solid #8a2be2 !important;
-  color: #ff00ff !important;
-  text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
-  position: relative;
+    font-style: normal;
+    font-weight: 600;
+    background-color: #edf2f7;
+    color: #2d3748;
+    border-top: 1px solid #cbd5e0;
+    border-bottom: 1px solid #cbd5e0;
 }
 
-.subtotal::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #ff00ff, transparent);
-}
-
-/* TOTALES */
+/* ===== Totales (Destacados) ===== */
 .total {
-  border-top: 3px solid #00ffff !important;
-  font-weight: 900 !important;
-  font-family: 'Orbitron', sans-serif;
-  background: linear-gradient(135deg, rgba(0, 255, 255, 0.2) 0%, rgba(0, 200, 255, 0.2) 100%) !important;
-  color: #00ffff !important;
-  text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
-  font-size: 14px !important;
-  letter-spacing: 1px;
-  position: relative;
-  animation: totalPulse 2s ease-in-out infinite;
-}
-
-@keyframes totalPulse {
-  0%, 100% {
-    box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.2);
-  }
-  50% {
-    box-shadow: inset 0 0 20px rgba(0, 255, 255, 0.4);
-  }
-}
-
-.total::before {
-  content: '∑';
-  position: absolute;
-  left: 5px;
-  font-size: 18px;
-  color: #00ffff;
-  animation: rotate 3s linear infinite;
-}
-
-@keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+    border-top: 2px solid #205C40 !important;
+    font-weight: 700 !important;
+    background-color: #f0fdf4;
+    color: #1a4731;
+    font-size: 13px;
 }
 
 .total.transposed {
-  border-top: 0px !important;
-  background: linear-gradient(135deg, rgba(0, 255, 255, 0.2) 0%, rgba(138, 43, 226, 0.2) 100%) !important;
-  border-left: 3px solid #00ffff !important;
+    border-top: 0px !important;
+    border-left: 3px solid #205C40 !important;
+    background-color: #f0fdf4;
 }
 
-/* FILAS ALTERNADAS */
-.reportTable tbody tr {
-  transition: all 0.3s ease;
+/* ===== Hover Ejecutivo ===== */
+.reportTable tbody tr:hover .rowCell,
+.reportTable tbody tr:hover .indexCell {
+    background-color: #f7fafc !important;
 }
 
-.reportTable tbody tr:nth-child(even) {
-  background: rgba(20, 20, 50, 0.3);
+.hover {
+    background-color: #f7fafc !important;
 }
 
-.reportTable tbody tr:hover {
-  transform: scale(1.01);
-  z-index: 10;
+/* ===== Filas Alternadas (Sutil) ===== */
+.reportTable tbody tr:nth-child(even) .rowCell,
+.reportTable tbody tr:nth-child(even) .indexCell {
+    background-color: #fafbfc;
 }
 
-/* NÚMEROS NEGATIVOS */
-.negative {
-  color: #ff0055 !important;
-  font-weight: 700;
-  text-shadow: 0 0 10px rgba(255, 0, 85, 0.6);
+/* ===== Elementos Animados ===== */
+.rectElem.animated {
+    margin: 4px;
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    transition: all 0.3s ease;
 }
 
-/* SCROLLBAR PERSONALIZADO */
-::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
+/* ===== Alineación de Números ===== */
+.numeric {
+    text-align: right;
+    font-family: 'Inter', monospace;
+    font-variant-numeric: tabular-nums;
+    font-weight: 500;
 }
 
-::-webkit-scrollbar-track {
-  background: rgba(10, 10, 30, 0.5);
-  border-radius: 10px;
+.nonNumeric {
+    text-align: left;
 }
 
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #00ffff, #ff00ff);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+/* ===== Bordes Redondeados en Primera y Última Fila ===== */
+.reportTable tbody tr:last-child .rowCell:first-child,
+.reportTable tbody tr:last-child .indexCell:first-child {
+    border-bottom-left-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #00cccc, #cc00cc);
+.reportTable tbody tr:last-child .rowCell:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+/* ===== Estados de Focus (Accesibilidad) ===== */
+.reportTable th:focus,
+.reportTable td:focus {
+    outline: 2px solid #64A70B;
+    outline-offset: -2px;
+}
+
+/* ===== Scrollbar Profesional ===== */
+.reportTable-wrapper::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.reportTable-wrapper::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+}
+
+.reportTable-wrapper::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 4px;
+}
+
+.reportTable-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #64A70B;
 }
