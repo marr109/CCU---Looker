@@ -1,169 +1,190 @@
-/* ===== Tipografía Base ===== */
-body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 12px;
-    color: #7a7a7a;
-    background-color: #F7F7F7;
+@font-face {
+  font-family: 'Noto Sans TC';
+  src: url('./fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.woff2') format('woff2')
+}
+@font-face {
+  font-family: 'Noto Sans SC';
+  src: url('./fonts/noto-sans-sc-v11-latin_chinese-simplified-regular.woff2') format('woff2')
 }
 
-h1.masterH1 {
-    font-size: 16px;
-    font-weight: bold;
-    color: #205C40;
-    text-align: center;
-}
 
-h2.masterH2 {
-    font-size: 14px;
-    font-weight: bold;
-    color: #64A70B;
-    text-align: center;
-}
-
-.masterHeader {
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    color: #145c9e;
-}
-
-/* ===== Tooltip ===== */
 #tooltip {
     position: absolute;
+    width: auto;
+    height: auto;
     padding: 5px;
-    background-color: #F7F7F7;
+    background-color: white;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
     border-radius: 4px;
+    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
     pointer-events: none;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: sans-serif;
     font-size: 12px;
-    color: #000000;
     z-index: 2;
 }
 
-/* ===== Tablas de Reporte ===== */
+.tooltipTable {
+  font-family: Open Sans,Helvetica,Arial,sans-serif;
+  border: 0px;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.focus {
+  font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.hover {
+  background-color: #ffffbb;
+}
+
 .reportTable {
-    font-family: 'Helvetica Neue', Helvetica, Arial, Noto Sans TC, Noto Sans SC, sans-serif;
-    color: #7a7a7a;
-    border-collapse: collapse;
-    border-spacing: 3px;
-    table-layout: fixed;
-    width: 100%;
-    text-align: center;
+  font-family: Open Sans,Helvetica,Arial,Noto Sans TC, Noto Sans SC,sans-serif;
+  color: #696969;
+  border-collapse: collapse;
+  border-spacing: 3px;
+  table-layout: fixed;
 }
 
-/* ===== Encabezados Principales (Verde Oscuro) ===== */
 th.headerCell {
-    padding: 5px;
-    border-bottom: 1px solid #d3d3d3;
-    text-align: center;
-    font-weight: bold;
-    background-color: #205C40 !important; /* Verde oscuro para headers principales */
-    color: #FFFFFF !important;
+  background-color: #ccd8e4;
+  padding: 5px;
+  border-bottom: 1px solid #BDC3C7;
 }
 
-/* ===== Encabezados de Dimensiones (Verde Claro) ===== */
-.headerCell.dimension,
-.indexCell.transposed.dimension {
-    background-color: #64A70B; /* Verde claro para dimensiones */
-    color: #FFFFFF;
-    text-align: center; /* Centrado */
+.headerCell.dimension {
+  background-color: #e4ecf3;
+  border-right: 1px solid #BDC3C7; 
 }
 
-/* ===== Encabezados de Medidas (Verde Claro) ===== */
-.headerCell.measure,
-.indexCell.transposed.measure {
-    background-color: #64A70B; /* Verde claro para medidas */
-    color: #FFFFFF;
-    text-align: center; /* Centrado */
+.headerCell.pivot {
+  background-color: #ccd8e4;
+  border-right: 1px solid #BDC3C7; 
 }
 
-/* ===== Encabezados de Cálculos (Verde Claro) ===== */
-.headerCell.calculation,
-.indexCell.transposed.calculation {
-    background-color: #64A70B; /* Verde claro para cálculos */
-    color: #FFFFFF;
-    text-align: center; /* Centrado */
+.headerCell.measure {
+  background-color: #e4d0bd;
+  border-left: 1px solid #BDC3C7; 
 }
 
-/* ===== Encabezados Pivot (Verde Claro) ===== */
-.headerCell.pivot,
+.headerCell.measure.calculation {
+  background-color: #c9dfc5;
+  border-left: 1px solid #BDC3C7;
+}
+
+.headerCell.transposed.dimension {
+  background-color: #e4ecf3;
+}
+
+.headerCell.transposed.dimension.merged {
+  background-color: #e4ecf3 !important;
+}
+
+/* .headerCell.dimension.headerRow {
+  background-color: #ccd8e4;
+  border-right: 1px solid #BDC3C7;
+}
+
+.headerCell.pivot.headerRow {
+  background-color: #ccd8e4;
+  border-right: 1px solid #BDC3C7;
+}
+
+.headerCell.measure.headerRow {
+  background-color: #ccd8e4;
+  border-left: 1px solid #BDC3C7;
+} */
+
+.rowCell {
+  vertical-align: super;
+  padding-left: 5px;
+  border-bottom: 1px solid #BDC3C7; 
+}
+
+.rowCell.merged {
+  background-color: #ffffff !important;
+}
+
+.indexCell.transposed {
+  font-weight: bold;
+}
+
 .indexCell.transposed.pivot {
-    background-color: #64A70B; /* Verde claro para pivots */
-    color: #FFFFFF;
-    text-align: center; /* Centrado */
+  background-color: #ccd8e4;
 }
 
-/* ===== Celdas de Datos (Fondo Blanco/Transparente) ===== */
-.rowCell, .numeric, .nonNumeric {
-    vertical-align: middle;
-    padding: 5px;
-    border-bottom: 1px solid #d3d3d3;
-    text-align: center;
-    background-color: #FFFFFF; /* Fondo blanco para celdas de datos */
-    color: #7a7a7a;
+.indexCell.transposed.dimension {
+  background-color: #e4ecf3;
 }
 
-/* ===== Celdas de Índice (Fondo Blanco) ===== */
-.indexCell {
-    vertical-align: middle;
-    padding: 5px;
-    border-bottom: 1px solid #d3d3d3;
-    background-color: #FFFFFF;
-    color: #7a7a7a;
-    text-align: center; /* Índices alineados a la izquierda */
-    padding-left: 15px;
+.indexCell.transposed.measure {
+  background-color: #e4d0bd;
 }
 
-/* ===== Celdas Fusionadas ===== */
-.rowCell.merged, .indexCell.transposed.merged {
-    background-color: #F7F7F7 !important;
-    color: #7a7a7a !important;
+.indexCell.transposed.calculation {
+  background-color: #c9dfc5;
 }
 
-/* ===== Valores Negativos ===== */
+.indexCell.transposed.pivot.merged {
+  background-color: #ccd8e4 !important;
+}
+
+.indexCell.transposed.dimension.merged {
+  background-color: #e4ecf3 !important;
+}
+
+.indexCell.transposed.measure.merged {
+  background-color: #e4d0bd !important;
+}
+
+.indexCell.transposed.calculation.merged {
+  background-color: #c9dfc5 !important;
+}
+
+.nonNumeric {
+  text-align: left;
+}
+
+.numeric {
+  text-align: right;
+}
+
 .negative {
-    color: #A6093D; /* Rojo para negativos */
+  color: red;
 }
 
-/* ===== Estimaciones ===== */
 .estimate {
-    color: #7a7a7a !important;
+  color: darkgray !important;
 }
 
-/* ===== Índice Simple ===== */
 .singleIndex {
-    padding-left: 15px !important;
+  padding-left: 15px !important;
 }
 
-/* ===== Subtotales ===== */
 .subtotal {
-    font-style: italic;
-    font-weight: bold;
-    background-color: #d3d3d3;
-    color: #000000;
+  font-style: italic;
+  font-weight: bold;
+  background: #D3D3D3;
 }
 
-/* ===== Totales ===== */
 .total {
-    border-top: 2px solid #000000 !important;
-    font-weight: bold !important;
-    background-color: #F7F7F7;
-    color: #000000;
+  border-top: 2px solid #696969 !important;
+  font-weight: bold !important;
 }
 
 .total.transposed {
-    border-top: 0px !important;
-    background-color: #d3d3d3;
+  border-top: 0px !important;
+  background: #D3D3D3;
 }
 
-/* ===== Hover (Gris Claro) ===== */
-.hover {
-    background-color: #E8E8E8 !important; /* Gris claro al pasar mouse */
-}
-
-/* ===== Elementos Animados ===== */
 .rectElem.animated {
-    margin: 4px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: Open Sans,Helvetica,Arial,sans-serif;
+  margin: 4px;
 }
