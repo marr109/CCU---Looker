@@ -1,4 +1,15 @@
-/* ===== Tipografía Base ===== */
+/* ===== FUENTES PERSONALIZADAS ===== */
+@font-face {
+  font-family: 'Noto Sans TC';
+  src: url('./fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.woff2') format('woff2')
+}
+
+@font-face {
+  font-family: 'Noto Sans SC';
+  src: url('./fonts/noto-sans-sc-v11-latin_chinese-simplified-regular.woff2') format('woff2')
+}
+
+/* ===== TIPOGRAFÍA BASE ===== */
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 12px;
@@ -6,11 +17,13 @@ body {
     background-color: #F7F7F7;
 }
 
+/* ===== TÍTULOS PRINCIPALES ===== */
 h1.masterH1 {
     font-size: 16px;
     font-weight: bold;
     color: #205C40;
     text-align: center;
+    margin: 10px 0;
 }
 
 h2.masterH2 {
@@ -18,152 +31,244 @@ h2.masterH2 {
     font-weight: bold;
     color: #64A70B;
     text-align: center;
+    margin: 8px 0;
 }
 
 .masterHeader {
     font-size: 14px;
     font-weight: bold;
     text-align: center;
-    color: #145c9e;
+    color: #205C40;
 }
 
-/* ===== Tooltip ===== */
+/* ===== TOOLTIP ===== */
 #tooltip {
     position: absolute;
-    padding: 5px;
-    background-color: #F7F7F7;
+    width: auto;
+    height: auto;
+    padding: 8px 12px;
+    background-color: #FFFFFF;
     border-radius: 4px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    border: 1px solid #d3d3d3;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
     pointer-events: none;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 12px;
-    color: #000000;
-    z-index: 2;
+    color: #333333;
+    z-index: 999;
 }
 
-/* ===== Tablas de Reporte ===== */
+.tooltipTable {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    border: 0px;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+/* ===== UTILIDADES GENERALES ===== */
+.focus {
+    font-weight: bold;
+    outline: 2px solid #64A70B;
+}
+
+.hidden {
+    display: none;
+}
+
+.hover {
+    background-color: #E8F5E9 !important;
+    transition: background-color 0.2s ease;
+}
+
+/* ===== TABLA DE REPORTE PRINCIPAL ===== */
 .reportTable {
     font-family: 'Helvetica Neue', Helvetica, Arial, Noto Sans TC, Noto Sans SC, sans-serif;
     color: #7a7a7a;
     border-collapse: collapse;
-    border-spacing: 3px;
+    border-spacing: 0;
     table-layout: fixed;
     width: 100%;
-    text-align: center;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* ===== Encabezados Principales (Verde Oscuro) ===== */
+/* ===== ENCABEZADOS BASE ===== */
 th.headerCell {
-    padding: 5px;
-    border-bottom: 1px solid #d3d3d3;
+    padding: 10px 8px;
+    border-bottom: 2px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
     text-align: center;
-    font-weight: bold;
-    background-color: #205C40 !important; /* Verde oscuro para headers principales */
-    color: #FFFFFF !important;
-}
-
-/* ===== Encabezados de Dimensiones (Verde Claro) ===== */
-.headerCell.dimension,
-.indexCell.transposed.dimension {
-    background-color: #64A70B; /* Verde claro para dimensiones */
+    font-weight: 600;
+    font-size: 12px;
+    background-color: #205C40;
     color: #FFFFFF;
-    text-align: center; /* Centrado */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-/* ===== Encabezados de Medidas (Verde Claro) ===== */
-.headerCell.measure,
-.indexCell.transposed.measure {
-    background-color: #64A70B; /* Verde claro para medidas */
+/* ===== ENCABEZADOS DE DIMENSIONES (Verde Principal) ===== */
+.headerCell.dimension {
+    background-color: #64A70B;
     color: #FFFFFF;
-    text-align: center; /* Centrado */
+    border-right: 1px solid #FFFFFF;
 }
 
-/* ===== Encabezados de Cálculos (Verde Claro) ===== */
-.headerCell.calculation,
-.indexCell.transposed.calculation {
-    background-color: #64A70B; /* Verde claro para cálculos */
+/* ===== ENCABEZADOS PIVOT (Verde Intermedio) ===== */
+.headerCell.pivot {
+    background-color: #5A9609;
     color: #FFFFFF;
-    text-align: center; /* Centrado */
+    border-right: 1px solid #FFFFFF;
 }
 
-/* ===== Encabezados Pivot (Verde Claro) ===== */
-.headerCell.pivot,
-.indexCell.transposed.pivot {
-    background-color: #64A70B; /* Verde claro para pivots */
+/* ===== ENCABEZADOS DE MEDIDAS (Verde-Azul) ===== */
+.headerCell.measure {
+    background-color: #4A8A8A;
     color: #FFFFFF;
-    text-align: center; /* Centrado */
+    border-left: 1px solid #FFFFFF;
 }
 
-/* ===== Celdas de Datos (Fondo Blanco/Transparente) ===== */
-.rowCell, .numeric, .nonNumeric {
-    vertical-align: middle;
-    padding: 5px;
-    border-bottom: 1px solid #d3d3d3;
-    text-align: center;
-    background-color: #FFFFFF; /* Fondo blanco para celdas de datos */
-    color: #7a7a7a;
+/* ===== ENCABEZADOS DE CÁLCULOS (Verde Lima) ===== */
+.headerCell.measure.calculation {
+    background-color: #7AB81C;
+    color: #FFFFFF;
+    border-left: 1px solid #FFFFFF;
 }
 
-/* ===== Celdas de Índice (Fondo Blanco) ===== */
+/* ===== ENCABEZADOS TRANSPUESTOS ===== */
+.headerCell.transposed.dimension {
+    background-color: #64A70B;
+}
+
+.headerCell.transposed.dimension.merged {
+    background-color: #64A70B !important;
+}
+
+/* ===== CELDAS DE ÍNDICE (Laterales) ===== */
 .indexCell {
     vertical-align: middle;
-    padding: 5px;
-    border-bottom: 1px solid #d3d3d3;
+    padding: 8px 12px;
+    border-bottom: 1px solid #E0E0E0;
+    background-color: #F9F9F9;
+    color: #555555;
+    text-align: left;
+    font-weight: 500;
+}
+
+.indexCell.transposed {
+    font-weight: 600;
+    text-align: center;
+}
+
+.indexCell.transposed.pivot {
+    background-color: #5A9609;
+    color: #FFFFFF;
+}
+
+.indexCell.transposed.dimension {
+    background-color: #64A70B;
+    color: #FFFFFF;
+}
+
+.indexCell.transposed.measure {
+    background-color: #4A8A8A;
+    color: #FFFFFF;
+}
+
+.indexCell.transposed.calculation {
+    background-color: #7AB81C;
+    color: #FFFFFF;
+}
+
+/* ===== ÍNDICES TRANSPUESTOS FUSIONADOS ===== */
+.indexCell.transposed.pivot.merged {
+    background-color: #5A9609 !important;
+}
+
+.indexCell.transposed.dimension.merged {
+    background-color: #64A70B !important;
+}
+
+.indexCell.transposed.measure.merged {
+    background-color: #4A8A8A !important;
+}
+
+.indexCell.transposed.calculation.merged {
+    background-color: #7AB81C !important;
+}
+
+/* ===== CELDAS DE DATOS ===== */
+.rowCell {
+    vertical-align: middle;
+    padding: 8px 10px;
+    border-bottom: 1px solid #E0E0E0;
     background-color: #FFFFFF;
-    color: #7a7a7a;
-    text-align: center; /* Índices alineados a la izquierda */
-    padding-left: 15px;
+    color: #555555;
 }
 
-/* ===== Celdas Fusionadas ===== */
-.rowCell.merged, .indexCell.transposed.merged {
-    background-color: #F7F7F7 !important;
+.rowCell.merged {
+    background-color: #FAFAFA !important;
     color: #7a7a7a !important;
 }
 
-/* ===== Valores Negativos ===== */
+/* ===== ALINEACIÓN DE DATOS ===== */
+.nonNumeric {
+    text-align: left;
+}
+
+.numeric {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+/* ===== VALORES NEGATIVOS ===== */
 .negative {
-    color: #A6093D; /* Rojo para negativos */
+    color: #D32F2F;
+    font-weight: 500;
 }
 
-/* ===== Estimaciones ===== */
+/* ===== ESTIMACIONES ===== */
 .estimate {
-    color: #7a7a7a !important;
+    color: #9E9E9E !important;
+    font-style: italic;
 }
 
-/* ===== Índice Simple ===== */
+/* ===== ÍNDICE SIMPLE ===== */
 .singleIndex {
-    padding-left: 15px !important;
+    padding-left: 20px !important;
 }
 
-/* ===== Subtotales ===== */
+/* ===== SUBTOTALES ===== */
 .subtotal {
     font-style: italic;
-    font-weight: bold;
-    background-color: #d3d3d3;
-    color: #000000;
+    font-weight: 600;
+    background-color: #E8E8E8;
+    color: #333333;
+    border-top: 1px solid #BDBDBD;
 }
 
-/* ===== Totales ===== */
+/* ===== TOTALES ===== */
 .total {
-    border-top: 2px solid #000000 !important;
-    font-weight: bold !important;
-    background-color: #F7F7F7;
-    color: #000000;
+    border-top: 3px double #205C40 !important;
+    font-weight: 700 !important;
+    background-color: #F0F4F0;
+    color: #205C40;
+    font-size: 13px;
 }
 
 .total.transposed {
     border-top: 0px !important;
-    background-color: #d3d3d3;
+    border-left: 3px double #205C40;
+    background-color: #E8E8E8;
 }
 
-/* ===== Hover (Gris Claro) ===== */
-.hover {
-    background-color: #E8E8E8 !important; /* Gris claro al pasar mouse */
-}
-
-/* ===== Elementos Animados ===== */
+/* ===== ELEMENTOS ANIMADOS ===== */
 .rectElem.animated {
     margin: 4px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.rectElem.animated:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
