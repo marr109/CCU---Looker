@@ -155,49 +155,89 @@ th.headerCell:last-child {
     transition: background-color 0.15s ease;
 }
 
-/* ===== Indicadores de Tendencia (Flechas) ===== */
-.trend-indicator {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    justify-content: center;
+/* ===== Indicadores de Tendencia Automáticos con CSS ===== */
+
+/* Detectar valores positivos y agregar flecha verde hacia arriba */
+.rowCell[data-value^="+"]::after,
+.rowCell.positive::after,
+.numeric[data-value^="+"]::after,
+.numeric.positive::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 8px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 7px solid #10b981;
+    vertical-align: middle;
 }
 
-.trend-arrow {
+/* Detectar valores negativos y agregar flecha roja hacia abajo */
+.rowCell[data-value^="-"]::after,
+.rowCell.negative::after,
+.numeric[data-value^="-"]::after,
+.numeric.negative::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 8px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid #ef4444;
+    vertical-align: middle;
+}
+
+/* Colorear texto de valores positivos */
+.rowCell[data-value^="+"],
+.rowCell.positive,
+.numeric[data-value^="+"],
+.numeric.positive {
+    color: #059669 !important;
+    font-weight: 600;
+}
+
+/* Colorear texto de valores negativos */
+.rowCell[data-value^="-"],
+.rowCell.negative,
+.numeric[data-value^="-"],
+.numeric.negative {
+    color: #dc2626 !important;
+    font-weight: 600;
+}
+
+/* Valores neutrales */
+.rowCell.neutral,
+.numeric.neutral {
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* Flecha verde para porcentajes positivos */
+.percentage.positive::after {
+    content: "";
     display: inline-block;
     width: 0;
     height: 0;
     margin-left: 6px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 6px solid #10b981;
+    vertical-align: middle;
 }
 
-/* Flecha Verde Hacia Arriba (Positivo) */
-.trend-arrow.positive {
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 7px solid #10b981;
-}
-
-/* Flecha Roja Hacia Abajo (Negativo) */
-.trend-arrow.negative {
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 7px solid #ef4444;
-}
-
-/* Valor con color según tendencia */
-.value-positive {
-    color: #059669;
-    font-weight: 600;
-}
-
-.value-negative {
-    color: #dc2626;
-    font-weight: 600;
-}
-
-.value-neutral {
-    color: #6b7280;
-    font-weight: 500;
+/* Flecha roja para porcentajes negativos */
+.percentage.negative::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 6px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid #ef4444;
+    vertical-align: middle;
 }
 
 /* ===== Celdas de Índice ===== */
