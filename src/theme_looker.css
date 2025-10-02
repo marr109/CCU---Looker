@@ -49,6 +49,7 @@ h2.masterH2 {
     border-spacing: 3px;
     table-layout: fixed;
     width: 100%;
+    text-align: center; /* Centrar todo */
 }
 
 /* ===== Encabezados ===== */
@@ -57,84 +58,48 @@ th.headerCell {
     border-bottom: 1px solid #d3d3d3;
     text-align: center; /* Centrado de títulos */
     font-weight: bold;
-}
-
-.headerCell.dimension {
-    background-color: #64A70B; /* Verde primario */
+    background-color: #205C40; /* Verde oscuro en headers */
     color: #FFFFFF;
-    border-right: 1px solid #d3d3d3;
-}
-
-.headerCell.pivot {
-    background-color: #205C40; /* Verde oscuro */
-    color: #FFFFFF;
-    border-right: 1px solid #d3d3d3;
-}
-
-.headerCell.measure {
-    background-color: #FFB81C; /* Amarillo */
-    color: #000000;
-    border-left: 1px solid #d3d3d3;
-}
-
-.headerCell.measure.calculation {
-    background-color: #A6093D; /* Rojo */
-    color: #FFFFFF;
-    border-left: 1px solid #d3d3d3;
 }
 
 .headerCell.transposed.dimension {
-    background-color: #64A70B;
+    background-color: #205C40; /* Verde oscuro también si está transpuesta */
     color: #FFFFFF;
 }
 
 /* ===== Celdas de fila ===== */
-.rowCell {
+.rowCell, .indexCell, .numeric, .nonNumeric {
     vertical-align: middle;
     padding: 5px;
     border-bottom: 1px solid #d3d3d3;
-    text-align: center; /* Centrado de valores */
-}
-
-.rowCell.merged {
-    background-color: #F7F7F7 !important;
-}
-
-.indexCell.transposed {
-    font-weight: bold;
-    text-align: center;
-}
-
-.indexCell.transposed.pivot {
-    background-color: #205C40;
+    text-align: center; /* Centrado total */
+    background-color: #64A70B; /* Verde claro para todas las celdas */
     color: #FFFFFF;
 }
 
-.indexCell.transposed.dimension {
+.rowCell.merged, .indexCell.transposed.merged {
+    background-color: #F7F7F7 !important;
+    color: #7a7a7a !important;
+}
+
+/* Celdas especiales */
+.indexCell.transposed.pivot {
     background-color: #64A70B;
     color: #FFFFFF;
 }
 
 .indexCell.transposed.measure {
-    background-color: #FFB81C;
-    color: #000000;
-}
-
-.indexCell.transposed.calculation {
-    background-color: #A6093D;
+    background-color: #64A70B;
     color: #FFFFFF;
 }
 
-.numeric {
-    text-align: center; /* Centrar valores numéricos */
-}
-
-.nonNumeric {
-    text-align: center; /* Centrar valores de texto también */
+.indexCell.transposed.calculation {
+    background-color: #64A70B;
+    color: #FFFFFF;
 }
 
 .negative {
-    color: #A6093D;
+    color: #A6093D; /* rojo para negativos */
 }
 
 .estimate {
@@ -149,12 +114,14 @@ th.headerCell {
     font-style: italic;
     font-weight: bold;
     background-color: #d3d3d3;
+    color: #000000;
 }
 
 .total {
     border-top: 2px solid #000000 !important;
     font-weight: bold !important;
     background-color: #F7F7F7;
+    color: #000000;
 }
 
 .total.transposed {
@@ -162,9 +129,9 @@ th.headerCell {
     background-color: #d3d3d3;
 }
 
-/* Efectos Hover */
+/* Hover */
 .hover {
-    background-color: #FFB81C; /* Amarillo de hover */
+    background-color: #FFB81C; /* Amarillo al pasar mouse */
 }
 
 .rectElem.animated {
