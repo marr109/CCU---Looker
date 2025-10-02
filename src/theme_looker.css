@@ -124,7 +124,7 @@ th.headerCell:last-child {
     text-align: center !important; /* FORZAR CENTRADO */
     font-weight: 600;
     border-radius: 0; /* CUADRADO */
-    border-left: 8px solid #f8fafc; /* ESPACIADO entre dimensiones y measures */
+    border-left: 2px solid #f8fafc; /* ESPACIADO entre dimensiones y measures */
 }
 
 /* ===== Encabezados de Cálculos (Verde Medio) ===== */
