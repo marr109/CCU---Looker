@@ -116,6 +116,12 @@ th.headerCell:last-child {
     border-radius: 0; /* CUADRADO */
 }
 
+/* Solo la PRIMERA columna de measures tiene espaciado */
+.headerCell.measure:first-of-type,
+.indexCell.transposed.measure:first-of-type {
+    border-left: 8px solid #f8fafc; /* ESPACIADO entre dimensiones y measures */
+}
+
 /* ===== Encabezados de Cálculos (Verde Medio - CENTRADO) ===== */
 .headerCell.calculation,
 .indexCell.transposed.calculation {
@@ -124,6 +130,12 @@ th.headerCell:last-child {
     text-align: center !important; /* FORZAR CENTRADO */
     font-weight: 600;
     border-radius: 0; /* CUADRADO */
+}
+
+/* Solo la PRIMERA columna de cálculos tiene espaciado */
+.headerCell.calculation:first-of-type,
+.indexCell.transposed.calculation:first-of-type {
+    border-left: 8px solid #f8fafc; /* ESPACIADO entre dimensiones y cálculos */
 }
 
 /* ===== Encabezados Pivot (Verde Medio - CENTRADO) ===== */
@@ -153,7 +165,17 @@ th.headerCell:last-child {
     border-right: none;
 }
 
-/* Las columnas dentro de cada grupo NO tienen espaciado adicional */
+/* ===== Espaciado entre Dimensiones y Measures en celdas de datos ===== */
+/* Solo la PRIMERA celda de cada grupo tiene el espaciado */
+.rowCell.measure:first-of-type,
+.numeric.measure:first-of-type {
+    border-left: 8px solid #f8fafc; /* ESPACIADO vertical en columnas de measures */
+}
+
+.rowCell.calculation:first-of-type,
+.numeric.calculation:first-of-type {
+    border-left: 8px solid #f8fafc; /* ESPACIADO vertical en columnas de cálculos */
+}
 
 /* ===== Celdas de Índice (Dimensiones - CENTRADAS) ===== */
 .indexCell {
