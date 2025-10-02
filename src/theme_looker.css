@@ -49,67 +49,89 @@ h2.masterH2 {
     border-spacing: 3px;
     table-layout: fixed;
     width: 100%;
-    text-align: center; /* Centrar todo */
+    text-align: center;
 }
 
-/* ===== Encabezados ===== */
+/* ===== Encabezados Principales (Verde Oscuro) ===== */
 th.headerCell {
     padding: 5px;
     border-bottom: 1px solid #d3d3d3;
-    text-align: center; /* Centrado de títulos */
+    text-align: center;
     font-weight: bold;
-    background-color: #205C40; /* Verde oscuro en headers */
+    background-color: #205C40; /* Verde oscuro para headers principales */
     color: #FFFFFF;
 }
 
-.headerCell.transposed.dimension {
-    background-color: #205C40; /* Verde oscuro también si está transpuesta */
+/* ===== Encabezados de Dimensiones (Verde Claro) ===== */
+.headerCell.dimension,
+.indexCell.transposed.dimension {
+    background-color: #64A70B; /* Verde claro para dimensiones */
     color: #FFFFFF;
 }
 
-/* ===== Celdas de fila ===== */
-.rowCell, .indexCell, .numeric, .nonNumeric {
+/* ===== Encabezados de Medidas (Verde Claro) ===== */
+.headerCell.measure,
+.indexCell.transposed.measure {
+    background-color: #64A70B; /* Verde claro para medidas */
+    color: #FFFFFF;
+}
+
+/* ===== Encabezados de Cálculos (Verde Claro) ===== */
+.headerCell.calculation,
+.indexCell.transposed.calculation {
+    background-color: #64A70B; /* Verde claro para cálculos */
+    color: #FFFFFF;
+}
+
+/* ===== Encabezados Pivot (Verde Claro) ===== */
+.headerCell.pivot,
+.indexCell.transposed.pivot {
+    background-color: #64A70B; /* Verde claro para pivots */
+    color: #FFFFFF;
+}
+
+/* ===== Celdas de Datos (Fondo Blanco/Transparente) ===== */
+.rowCell, .numeric, .nonNumeric {
     vertical-align: middle;
     padding: 5px;
     border-bottom: 1px solid #d3d3d3;
-    text-align: center; /* Centrado total */
-    background-color: #64A70B; /* Verde claro para todas las celdas */
-    color: #FFFFFF;
+    text-align: center;
+    background-color: #FFFFFF; /* Fondo blanco para celdas de datos */
+    color: #7a7a7a;
 }
 
+/* ===== Celdas de Índice (Fondo Blanco) ===== */
+.indexCell {
+    vertical-align: middle;
+    padding: 5px;
+    border-bottom: 1px solid #d3d3d3;
+    text-align: center;
+    background-color: #FFFFFF;
+    color: #7a7a7a;
+}
+
+/* ===== Celdas Fusionadas ===== */
 .rowCell.merged, .indexCell.transposed.merged {
     background-color: #F7F7F7 !important;
     color: #7a7a7a !important;
 }
 
-/* Celdas especiales */
-.indexCell.transposed.pivot {
-    background-color: #64A70B;
-    color: #FFFFFF;
-}
-
-.indexCell.transposed.measure {
-    background-color: #64A70B;
-    color: #FFFFFF;
-}
-
-.indexCell.transposed.calculation {
-    background-color: #64A70B;
-    color: #FFFFFF;
-}
-
+/* ===== Valores Negativos ===== */
 .negative {
-    color: #A6093D; /* rojo para negativos */
+    color: #A6093D; /* Rojo para negativos */
 }
 
+/* ===== Estimaciones ===== */
 .estimate {
     color: #7a7a7a !important;
 }
 
+/* ===== Índice Simple ===== */
 .singleIndex {
     padding-left: 15px !important;
 }
 
+/* ===== Subtotales ===== */
 .subtotal {
     font-style: italic;
     font-weight: bold;
@@ -117,6 +139,7 @@ th.headerCell {
     color: #000000;
 }
 
+/* ===== Totales ===== */
 .total {
     border-top: 2px solid #000000 !important;
     font-weight: bold !important;
@@ -129,11 +152,12 @@ th.headerCell {
     background-color: #d3d3d3;
 }
 
-/* Hover */
+/* ===== Hover (Gris Claro) ===== */
 .hover {
-    background-color: #FFB81C; /* Amarillo al pasar mouse */
+    background-color: #E8E8E8 !important; /* Gris claro al pasar mouse */
 }
 
+/* ===== Elementos Animados ===== */
 .rectElem.animated {
     margin: 4px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
