@@ -64,16 +64,24 @@ th.headerCell {
 
 /* ===== Encabezados de Dimensiones (Verde Claro) ===== */
 .headerCell.dimension,
-.indexCell.transposed.dimension {
-    background-color: #64A70B; /* Verde claro para dimensiones */
-    color: #FFFFFF;
+.indexCell.transposed.dimension,
+.indexCell.dimension {
+    background-color: #64A70B !important; /* Verde claro para dimensiones */
+    color: #FFFFFF !important;
+    padding: 5px 10px !important;
+    width: auto !important;
+    min-width: 120px !important;
+    max-width: 200px !important;
 }
 
 /* ===== Encabezados de Medidas (Verde Claro) ===== */
 .headerCell.measure,
-.indexCell.transposed.measure {
-    background-color: #64A70B; /* Verde claro para medidas */
-    color: #FFFFFF;
+.indexCell.transposed.measure,
+.indexCell.measure {
+    background-color: #64A70B !important; /* Verde claro para medidas */
+    color: #FFFFFF !important;
+    text-align: center !important;
+    padding: 5px !important;
 }
 
 /* ===== Encabezados de Cálculos (Verde Claro) ===== */
@@ -95,7 +103,7 @@ th.headerCell {
     vertical-align: middle;
     padding: 5px;
     border-bottom: 1px solid #d3d3d3;
-    text-align: center;
+    text-align: center !important;
     background-color: #FFFFFF; /* Fondo blanco para celdas de datos */
     color: #7a7a7a;
 }
@@ -103,11 +111,14 @@ th.headerCell {
 /* ===== Celdas de Índice (Fondo Blanco) ===== */
 .indexCell {
     vertical-align: middle;
-    padding: 5px;
+    padding: 5px 10px;
     border-bottom: 1px solid #d3d3d3;
-    text-align: center;
+    text-align: left !important;
     background-color: #FFFFFF;
     color: #7a7a7a;
+    width: auto !important;
+    min-width: 120px !important;
+    max-width: 200px !important;
 }
 
 /* ===== Celdas Fusionadas ===== */
