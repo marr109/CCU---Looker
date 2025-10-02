@@ -58,17 +58,17 @@ th.headerCell {
     border-bottom: 1px solid #d3d3d3;
     text-align: center;
     font-weight: bold;
-    background-color: #205C40 !important; /* Verde oscuro */
+    background-color: #205C40 !important;
     color: #FFFFFF !important;
 }
 
 /* ===== Encabezados de Dimensiones (Verde Claro, alineados a la izquierda) ===== */
 .headerCell.dimension,
 .indexCell.transposed.dimension {
-    background-color: #64A70B; /* Verde claro */
+    background-color: #64A70B;
     color: #FFFFFF;
-    text-align: left; /* Alineado a la izquierda */
-    padding-left: 10px; /* Espacio interno */
+    text-align: left;
+    padding-left: 10px;
 }
 
 /* ===== Encabezados de Medidas (Verde Claro, con separación) ===== */
@@ -77,8 +77,8 @@ th.headerCell {
     background-color: #64A70B;
     color: #FFFFFF;
     text-align: center;
-    padding: 5px 10px; /* Espaciado uniforme */
-    border-left: 4px solid #F7F7F7; /* Separación visual entre medidas */
+    padding: 5px 10px;
+    border-left: 4px solid #F7F7F7;
 }
 
 /* ===== Encabezados de Cálculos (Verde Claro) ===== */
@@ -114,7 +114,7 @@ th.headerCell {
     border-bottom: 1px solid #d3d3d3;
     background-color: #FFFFFF;
     color: #7a7a7a;
-    text-align: left; /* Alineado a la izquierda */
+    text-align: left;
     padding-left: 15px;
 }
 
@@ -126,7 +126,7 @@ th.headerCell {
 
 /* ===== Valores Negativos ===== */
 .negative {
-    color: #A6093D; /* Rojo */
+    color: #A6093D;
 }
 
 /* ===== Estimaciones ===== */
@@ -160,9 +160,16 @@ th.headerCell {
     background-color: #d3d3d3;
 }
 
-/* ===== Hover ===== */
+/* ===== Hover (Amarillo Claro) ===== */
 .hover {
-    background-color: #E8E8E8 !important; /* Gris claro al pasar mouse */
+    background-color: #ffffbb !important;
+}
+
+/* Aplica hover automático a filas y celdas */
+.reportTable tr:hover td,
+.reportTable tr:hover th {
+    background-color: #ffffbb !important;
+    cursor: pointer;
 }
 
 /* ===== Elementos Animados ===== */
