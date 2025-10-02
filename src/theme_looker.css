@@ -58,30 +58,24 @@ th.headerCell {
     border-bottom: 1px solid #d3d3d3;
     text-align: center;
     font-weight: bold;
+    background-color: #205C40; /* Verde oscuro para headers principales */
+    color: #FFFFFF;
     background-color: #205C40 !important; /* Verde oscuro para headers principales */
     color: #FFFFFF !important;
 }
 
 /* ===== Encabezados de Dimensiones (Verde Claro) ===== */
 .headerCell.dimension,
-.indexCell.transposed.dimension,
-.indexCell.dimension {
-    background-color: #64A70B !important; /* Verde claro para dimensiones */
-    color: #FFFFFF !important;
-    padding: 5px 10px !important;
-    width: auto !important;
-    min-width: 120px !important;
-    max-width: 200px !important;
+.indexCell.transposed.dimension {
+    background-color: #64A70B; /* Verde claro para dimensiones */
+    color: #FFFFFF;
 }
 
 /* ===== Encabezados de Medidas (Verde Claro) ===== */
 .headerCell.measure,
-.indexCell.transposed.measure,
-.indexCell.measure {
-    background-color: #64A70B !important; /* Verde claro para medidas */
-    color: #FFFFFF !important;
-    text-align: center !important;
-    padding: 5px !important;
+.indexCell.transposed.measure {
+    background-color: #64A70B; /* Verde claro para medidas */
+    color: #FFFFFF;
 }
 
 /* ===== Encabezados de Cálculos (Verde Claro) ===== */
