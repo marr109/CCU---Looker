@@ -58,8 +58,8 @@ th.headerCell {
     border-bottom: 1px solid #d3d3d3;
     text-align: center;
     font-weight: bold;
-    background-color: #205C40; /* Verde oscuro para headers principales */
-    color: #FFFFFF;
+    background-color: #205C40 !important; /* Verde oscuro para headers principales */
+    color: #FFFFFF !important;
 }
 
 /* ===== Encabezados de Dimensiones (Verde Claro) ===== */
