@@ -1,12 +1,11 @@
 @font-face {
   font-family: 'Noto Sans TC';
-  src: url('./fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.woff2') format('woff2')
+  src: url('./fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Noto Sans SC';
-  src: url('./fonts/noto-sans-sc-v11-latin_chinese-simplified-regular.woff2') format('woff2')
+  src: url('./fonts/noto-sans-sc-v11-latin_chinese-simplified-regular.woff2') format('woff2');
 }
-
 
 #tooltip {
     position: absolute;
@@ -61,8 +60,8 @@ th.headerCell {
 .headerCell.dimension {
   background-color: #64A70B; /* Verde medio */ 
   border-right: 1px solid #FFFFFF; 
-  color: #FFFFFF; /* Color de titulo */ 
-  text-align: center  !important; 
+  color: #FFFFFF; 
+  text-align: center !important; 
 }
 
 .headerCell.pivot {
@@ -73,8 +72,9 @@ th.headerCell {
 .headerCell.measure {
   background-color: #205C40; /* Verde Oscuro */ 
   border-left: 1px solid #BDC3C7; 
-  color: #FFFFFF; /* Color de titulo */ 
-  text-align: center  !important; 
+  color: #FFFFFF; 
+  text-align: center !important; 
+  vertical-align: middle;
 }
 
 .headerCell.measure.calculation {
@@ -90,26 +90,19 @@ th.headerCell {
   background-color: #ccd8e4 !important;
 }
 
-/* .headerCell.dimension.headerRow { 
-  background-color: #ED0707;
-  border-right: 1px solid #BDC3C7;
-}
-
-.headerCell.pivot.headerRow {
-  background-color: #ccd8e4;
-  border-right: 1px solid #BDC3C7;
-}
-
-.headerCell.measure.headerRow {
-  background-color: #F9F9F9;
-  border-left: 1px solid #BDC3C7;
-} */
-
 .rowCell {
   vertical-align: super;
   padding-left: 5px;
   border-bottom: 1px solid #BDC3C7; 
-  background-color: #F2F2F2 !important;
+}
+
+/* Diferenciar métricas y dimensiones en filas */
+.rowCell.dimension {
+  background-color: #F2F2F2 !important; /* gris claro */
+}
+
+.rowCell.measure {
+  background-color: #E8F4E8 !important; /* verde claro */
 }
 
 .rowCell.merged {
