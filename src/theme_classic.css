@@ -98,11 +98,11 @@ th.headerCell {
 
 /* Diferenciar métricas y dimensiones en filas */
 .rowCell.dimension {
-  background-color: #F2F2F2 !important; /* gris claro */
+  background-color: #E8F4E8 !important; /* gris claro */
 }
 
 .rowCell.measure {
-  background-color: #E8F4E8 !important; /* verde claro */
+  background-color: #F2F2F2 !important; /* verde claro */
 }
 
 .rowCell.merged {
