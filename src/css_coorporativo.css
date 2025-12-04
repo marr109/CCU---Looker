@@ -80,12 +80,10 @@ th.headerCell {
 
 .headerCell.transposed.dimension {
   background-color: #64A70B;
-  color: #0000 !important;
 }
 
 .headerCell.transposed.dimension.merged {
   background-color: #64A70B !important;
-  color: #0000 !important;
 }
 
 .rowCell {
