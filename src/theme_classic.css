@@ -7,18 +7,13 @@
   src: url('./fonts/noto-sans-sc-v11-latin_chinese-simplified-regular.woff2') format('woff2')
 }
 
-
 #tooltip {
     position: absolute;
     width: auto;
     height: auto;
     padding: 5px;
-    background-color: white;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
+    background-color: #ffffff;
     border-radius: 4px;
-    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
     pointer-events: none;
     font-family: sans-serif;
@@ -42,74 +37,66 @@
 }
 
 .hover {
-  background-color: #ffffbb;
+  background-color: #f0f9ff;
 }
 
 .reportTable {
   font-family: Open Sans,Helvetica,Arial,Noto Sans TC, Noto Sans SC,sans-serif;
-  color: #696969;
+  color: #4a5568;
   border-collapse: collapse;
   border-spacing: 3px;
   table-layout: fixed;
 }
 
 th.headerCell {
-  background-color: #ccd8e4;
+  background-color: #205C40;
   padding: 5px;
-  border-bottom: 1px solid #BDC3C7;
+  border-bottom: 1px solid #1a4731;
+  color: #ffffff;
 }
 
 .headerCell.dimension {
-  background-color: #e4ecf3;
-  border-right: 1px solid #BDC3C7; 
+  background-color: #64A70B;
+  border-right: 1px solid #52880a;
+  color: #ffffff;
 }
 
 .headerCell.pivot {
-  background-color: #ccd8e4;
-  border-right: 1px solid #BDC3C7; 
+  background-color: #64A70B;
+  border-right: 1px solid #52880a;
+  color: #ffffff;
 }
 
 .headerCell.measure {
-  background-color: #e4d0bd;
-  border-left: 1px solid #BDC3C7; 
+  background-color: #64A70B;
+  border-left: 1px solid #52880a;
+  color: #ffffff;
 }
 
 .headerCell.measure.calculation {
-  background-color: #c9dfc5;
-  border-left: 1px solid #BDC3C7;
+  background-color: #64A70B;
+  border-left: 1px solid #52880a;
+  color: #ffffff;
 }
 
 .headerCell.transposed.dimension {
-  background-color: #e4ecf3;
+  background-color: #64A70B;
+  color: #ffffff;
 }
 
 .headerCell.transposed.dimension.merged {
-  background-color: #e4ecf3 !important;
+  background-color: #64A70B !important;
 }
-
-/* .headerCell.dimension.headerRow {
-  background-color: #ccd8e4;
-  border-right: 1px solid #BDC3C7;
-}
-
-.headerCell.pivot.headerRow {
-  background-color: #ccd8e4;
-  border-right: 1px solid #BDC3C7;
-}
-
-.headerCell.measure.headerRow {
-  background-color: #ccd8e4;
-  border-left: 1px solid #BDC3C7;
-} */
 
 .rowCell {
   vertical-align: super;
   padding-left: 5px;
-  border-bottom: 1px solid #BDC3C7; 
+  border-bottom: 1px solid #e2e8f0;
+  color: #2d3748;
 }
 
 .rowCell.merged {
-  background-color: #ffffff !important;
+  background-color: #f7fafc !important;
 }
 
 .indexCell.transposed {
@@ -117,35 +104,39 @@ th.headerCell {
 }
 
 .indexCell.transposed.pivot {
-  background-color: #ccd8e4;
+  background-color: #64A70B;
+  color: #ffffff;
 }
 
 .indexCell.transposed.dimension {
-  background-color: #e4ecf3;
+  background-color: #64A70B;
+  color: #ffffff;
 }
 
 .indexCell.transposed.measure {
-  background-color: #e4d0bd;
+  background-color: #64A70B;
+  color: #ffffff;
 }
 
 .indexCell.transposed.calculation {
-  background-color: #c9dfc5;
+  background-color: #64A70B;
+  color: #ffffff;
 }
 
 .indexCell.transposed.pivot.merged {
-  background-color: #ccd8e4 !important;
+  background-color: #64A70B !important;
 }
 
 .indexCell.transposed.dimension.merged {
-  background-color: #e4ecf3 !important;
+  background-color: #64A70B !important;
 }
 
 .indexCell.transposed.measure.merged {
-  background-color: #e4d0bd !important;
+  background-color: #64A70B !important;
 }
 
 .indexCell.transposed.calculation.merged {
-  background-color: #c9dfc5 !important;
+  background-color: #64A70B !important;
 }
 
 .nonNumeric {
@@ -157,11 +148,11 @@ th.headerCell {
 }
 
 .negative {
-  color: red;
+  color: #dc2626;
 }
 
 .estimate {
-  color: darkgray !important;
+  color: #6b7280 !important;
 }
 
 .singleIndex {
@@ -171,17 +162,21 @@ th.headerCell {
 .subtotal {
   font-style: italic;
   font-weight: bold;
-  background: #D3D3D3;
+  background: #f9fafb;
+  color: #374151;
 }
 
+/* === Total en verde oscuro + texto blanco === */
 .total {
-  border-top: 2px solid #696969 !important;
+  border-top: 2px solid #205C40 !important;
+  background: #205C40 !important;
+  color: #ffffff !important;
   font-weight: bold !important;
 }
 
 .total.transposed {
-  border-top: 0px !important;
-  background: #D3D3D3;
+  background: #205C40 !important;
+  color: #ffffff !important;
 }
 
 .rectElem.animated {
