@@ -61,8 +61,8 @@ th.headerCell {
 
 .headerCell.dimension {
   background-color: #64A70B; /* Verde medio */ 
-  color: #FFFFFF; 
   border-right: 1px solid #FFFFFF; 
+  color: #FFFFFF; /* Color de titulo */ 
 }
 
 .headerCell.pivot {
@@ -73,6 +73,7 @@ th.headerCell {
 .headerCell.measure {
   background-color: #205C40; /* Verde Oscuro */ 
   border-left: 1px solid #BDC3C7; 
+  color: #FFFFFF; /* Color de titulo */ 
 }
 
 .headerCell.measure.calculation {
