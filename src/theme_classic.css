@@ -123,11 +123,11 @@ th.headerCell {
 }
 
 .indexCell.transposed.dimension {
-  background-color: #e4ecf3;
+  background-color: #205C40; /* Verde Oscuro */ 
 }
 
 .indexCell.transposed.measure {
-  background-color: #e4d0bd;
+  background-color: #205C40; /* Verde Oscuro */ 
 }
 
 .indexCell.transposed.calculation {
