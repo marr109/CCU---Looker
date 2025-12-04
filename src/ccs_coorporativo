@@ -13,11 +13,7 @@
     height: auto;
     padding: 5px;
     background-color: white;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
     border-radius: 4px;
-    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
     pointer-events: none;
     font-family: sans-serif;
@@ -26,7 +22,7 @@
 }
 
 .tooltipTable {
-  font-family: Open Sans,Helvetica,Arial,sans-serif;
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
   border: 0px;
   border-collapse: collapse;
   table-layout: auto;
@@ -45,7 +41,7 @@
 }
 
 .reportTable {
-  font-family: Open Sans,Helvetica,Arial,Noto Sans TC, Noto Sans SC,sans-serif;
+  font-family: Open Sans, Helvetica, Arial, Noto Sans TC, Noto Sans SC, sans-serif;
   color: #525252;
   border-collapse: collapse;
   border-spacing: 6px;
@@ -58,7 +54,7 @@ th.headerCell {
 }
 
 .headerCell.dimension {
-  background-color: #64A70B; /* Verde medio */ 
+  background-color: #64A70B; 
   border-right: 1px solid #FFFFFF; 
   color: #FFFFFF; 
   text-align: center !important; 
@@ -70,7 +66,7 @@ th.headerCell {
 }
 
 .headerCell.measure {
-  background-color: #205C40; /* Verde Oscuro */ 
+  background-color: #205C40; 
   border-left: 1px solid #BDC3C7; 
   color: #FFFFFF; 
   text-align: center !important; 
@@ -98,18 +94,11 @@ th.headerCell {
 
 /* Diferenciar métricas y dimensiones en filas */
 .rowCell.dimension {
-  background-color: #E8F4E8 !important; /* gris claro */
-}
-
-.total {
-  border-top: 2px solid #696969 !important;
-  font-weight: bold !important;
-  background-color: #205C40 !important;
-  color: #FFFF; 
+  background-color: #E8F4E8 !important;
 }
 
 .rowCell.measure {
-  background-color: #F2F2F2 !important; /* verde claro */
+  background-color: #F2F2F2 !important;
 }
 
 .rowCell.merged {
@@ -120,36 +109,46 @@ th.headerCell {
   font-weight: bold;
 }
 
-.indexCell.transposed.pivot {
-  background-color: #ccd8e4;
-}
-
+/* Transposed colors ajustados para respetar el original */
 .indexCell.transposed.dimension {
-  background-color: #205C40; /* Verde Oscuro */ 
+  background-color: #64A70B; 
+  color: #FFFFFF;
 }
 
 .indexCell.transposed.measure {
-  background-color: #205C40; /* Verde Oscuro */ 
+  background-color: #205C40; 
+  color: #FFFFFF;
 }
 
 .indexCell.transposed.calculation {
-  background-color: #c9dfc5;
+  background-color: #c9dfc5; 
+  color: #000000;
 }
 
-.indexCell.transposed.pivot.merged {
-  background-color: #ccd8e4 !important;
+.indexCell.transposed.pivot {
+  background-color: #ccd8e4; 
+  color: #000000;
 }
 
+/* Fusionadas transpuestas */
 .indexCell.transposed.dimension.merged {
-  background-color: #e4ecf3 !important;
+  background-color: #64A70B !important;
+  color: #FFFFFF;
 }
 
 .indexCell.transposed.measure.merged {
-  background-color: #e4d0bd !important;
+  background-color: #205C40 !important;
+  color: #FFFFFF;
 }
 
 .indexCell.transposed.calculation.merged {
   background-color: #c9dfc5 !important;
+  color: #000000;
+}
+
+.indexCell.transposed.pivot.merged {
+  background-color: #ccd8e4 !important;
+  color: #000000;
 }
 
 .nonNumeric {
@@ -178,7 +177,12 @@ th.headerCell {
   background: #D3D3D3;
 }
 
-
+.total {
+  border-top: 2px solid #696969 !important;
+  font-weight: bold !important;
+  background-color: #205C40 !important;
+  color: #000000; 
+}
 
 .total.transposed {
   border-top: 0px !important;
@@ -186,6 +190,6 @@ th.headerCell {
 }
 
 .rectElem.animated {
-  font-family: Open Sans,Helvetica,Arial,sans-serif;
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
   margin: 4px;
 }
