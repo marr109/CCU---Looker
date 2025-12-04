@@ -1,136 +1,82 @@
-@font-face {
-  font-family: 'Noto Sans TC';
-  src: url('./fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.woff2') format('woff2')
-}
-@font-face {
-  font-family: 'Noto Sans SC';
-  src: url('./fonts/noto-sans-sc-v11-latin_chinese-simplified-regular.woff2') format('woff2')
-}
-
-#tooltip {
-    position: absolute;
-    width: auto;
-    height: auto;
-    padding: 5px;
-    background-color: #ffffff;
-    border-radius: 4px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-    pointer-events: none;
-    font-family: sans-serif;
-    font-size: 12px;
-    z-index: 2;
-}
-
-.tooltipTable {
-  font-family: Open Sans,Helvetica,Arial,sans-serif;
-  border: 0px;
-  border-collapse: collapse;
-  table-layout: auto;
-}
-
-.focus { font-weight: bold; }
-.hidden { display: none; }
-.hover { background-color: #f0f9ff; }
-
-.reportTable {
-  font-family: Open Sans,Helvetica,Arial,Noto Sans TC, Noto Sans SC,sans-serif;
-  color: #4a5568;
-  border-collapse: collapse;
-  border-spacing: 3px;
-  table-layout: fixed;
-}
-
-/* ===== HEADER GENERAL (verde oscuro) ===== */
+/* ===== ENCABEZADOS BASE ===== */
 th.headerCell {
-  background-color: #205C40;
-  padding: 5px;
-  border-bottom: 1px solid #1a4731;
-  color: #ffffff;
+    padding: 10px 8px;
+    border-bottom: 2px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px;
+    background-color: #205C40; /* Verde oscuro */
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-/* ===== DIMENSIONES - HEADER (verde claro) ===== */
-.headerCell.dimension,
-.headerCell.pivot,
-.headerCell.transposed.dimension,
-.headerCell.transposed.dimension.merged {
-  background-color: #A7D7C5 !important;
-  color: #000000 !important;
-  border-right: 1px solid #8EB9A9;
+/* ===== ENCABEZADOS DE DIMENSIONES ===== */
+.headerCell.dimension {
+    background-color: #64A70B; /* Verde claro */
+    color: #FFFFFF;
+    border-right: 1px solid #FFFFFF;
 }
 
-/* ===== MÉTRICAS - HEADER (verde oscuro) ===== */
-.headerCell.measure,
+/* ===== ENCABEZADOS PIVOT ===== */
+.headerCell.pivot {
+    background-color: #64A70B; /* Verde claro */
+    color: #FFFFFF;
+    border-right: 1px solid #FFFFFF;
+}
+
+/* ===== ENCABEZADOS DE MEDIDAS ===== */
+.headerCell.measure {
+    background-color: #64A70B; /* Verde claro */
+    color: #FFFFFF;
+    border-left: 1px solid #FFFFFF;
+}
+
+/* ===== ENCABEZADOS DE CÁLCULOS ===== */
 .headerCell.measure.calculation {
-  background-color: #205C40 !important;
-  color: #ffffff !important;
-  border-left: 1px solid #18432F;
+    background-color: #64A70B; /* Verde claro */
+    color: #FFFFFF;
+    border-left: 1px solid #FFFFFF;
 }
 
-/* ===== CELDAS NORMALES (gris claro) ===== */
-td.dimension,
-td.measure,
-.rowCell {
-  background-color: #F5F7F9 !important;
-  color: #2d3748 !important;
+/* ===== ENCABEZADOS TRANSPUESTOS ===== */
+.headerCell.transposed.dimension,
+.indexCell.transposed.dimension {
+    background-color: #64A70B; /* Verde claro */
+    color: #FFFFFF;
 }
 
-.rowCell.merged {
-  background-color: #f7fafc !important;
-}
-
-/* ===== CELDAS TRANSPOSED DIMENSIONES (verde claro) ===== */
-.indexCell.transposed.dimension,
-.indexCell.transposed.pivot,
+.headerCell.transposed.dimension.merged,
 .indexCell.transposed.dimension.merged {
-  background-color: #A7D7C5 !important;
-  color: #000000 !important;
+    background-color: #64A70B !important;
 }
 
-/* ===== CELDAS TRANSPOSED MÉTRICAS (verde oscuro) ===== */
+/* ===== CELDAS DE ÍNDICE TRANSPUESTAS ===== */
+.indexCell.transposed.pivot,
 .indexCell.transposed.measure,
-.indexCell.transposed.calculation,
+.indexCell.transposed.calculation {
+    background-color: #64A70B; /* Verde claro */
+    color: #FFFFFF;
+}
+
+.indexCell.transposed.pivot.merged,
 .indexCell.transposed.measure.merged,
 .indexCell.transposed.calculation.merged {
-  background-color: #205C40 !important;
-  color: #ffffff !important;
+    background-color: #64A70B !important;
 }
 
-.indexCell.transposed { font-weight: bold; }
-
-/* ===== FORMATO GENERAL ===== */
-.nonNumeric { text-align: left; }
-.numeric { text-align: right; }
-.negative { color: #dc2626; }
-.estimate { color: #6b7280 !important; }
-.singleIndex { padding-left: 15px !important; }
-
-/* ===== SUBTOTALES (verde clarito) ===== */
-.subtotal,
-.subtotal td,
-.subtotal th {
-  background: #CFEDE3 !important;
-  color: #000000 !important;
-  font-style: italic;
-  font-weight: bold;
-}
-
-/* ===== TOTALES (verde oscuro) ===== */
-.total,
-.total td,
-.total th {
-  border-top: 2px solid #205C40 !important;
-  background: #205C40 !important;
-  color: #ffffff !important;
-  font-weight: bold !important;
+/* ===== TOTALES ===== */
+.total {
+    border-top: 3px double #205C40 !important; /* Verde oscuro */
+    font-weight: 700 !important;
+    background-color: #F0F4F0;
+    color: #205C40;
+    font-size: 13px;
 }
 
 .total.transposed {
-  background: #205C40 !important;
-  color: #ffffff !important;
-}
-
-/* ===== ANIMADOS ===== */
-.rectElem.animated {
-  font-family: Open Sans,Helvetica,Arial,sans-serif;
-  margin: 4px;
+    border-top: 0px !important;
+    border-left: 3px double #205C40; /* Verde oscuro */
+    background-color: #E8E8E8;
 }
