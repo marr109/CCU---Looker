@@ -79,11 +79,11 @@ th.headerCell {
 }
 
 .headerCell.transposed.dimension {
-  background-color: #ccd8e4;
+  background-color: #64A70B;
 }
 
 .headerCell.transposed.dimension.merged {
-  background-color: #ccd8e4 !important;
+  background-color: #64A70B !important;
 }
 
 .rowCell {
@@ -111,12 +111,12 @@ th.headerCell {
 
 /* Transposed colors ajustados para respetar el original */
 .indexCell.transposed.dimension {
-  background-color: #64A70B; 
+  background-color: #64A70B !important; 
   color: #FFFFFF;
 }
 
 .indexCell.transposed.measure {
-  background-color: #205C40; 
+  background-color: #205C40 !important; 
   color: #FFFFFF;
 }
 
