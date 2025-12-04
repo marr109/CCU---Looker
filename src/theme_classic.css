@@ -1,74 +1,40 @@
-/* ===== FUENTES PERSONALIZADAS ===== */
 @font-face {
   font-family: 'Noto Sans TC';
   src: url('./fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.woff2') format('woff2')
 }
-
 @font-face {
   font-family: 'Noto Sans SC';
   src: url('./fonts/noto-sans-sc-v11-latin_chinese-simplified-regular.woff2') format('woff2')
 }
 
-/* ===== TIPOGRAFÍA BASE ===== */
-body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 12px;
-    color: #7a7a7a;
-    background-color: #F7F7F7;
-}
 
-/* ===== TÍTULOS PRINCIPALES ===== */
-h1.masterH1 {
-    font-size: 16px;
-    font-weight: bold;
-    color: #205C40; /* Verde oscuro corporativo */
-    text-align: center;
-    margin: 10px 0;
-}
-
-h2.masterH2 {
-    font-size: 14px;
-    font-weight: bold;
-    color: #64A70B; /* Verde medio corporativo */
-    text-align: center;
-    margin: 8px 0;
-}
-
-.masterHeader {
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    color: #205C40;
-}
-
-/* ===== TOOLTIP ===== */
 #tooltip {
     position: absolute;
     width: auto;
     height: auto;
-    padding: 8px 12px;
-    background-color: #FFFFFF;
+    padding: 5px;
+    background-color: white;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
     border-radius: 4px;
-    border: 1px solid #d3d3d3;
-    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
     pointer-events: none;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: sans-serif;
     font-size: 12px;
-    color: #333333;
-    z-index: 999;
+    z-index: 2;
 }
 
 .tooltipTable {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    border: 0px;
-    border-collapse: collapse;
-    table-layout: auto;
+  font-family: Open Sans,Helvetica,Arial,sans-serif;
+  border: 0px;
+  border-collapse: collapse;
+  table-layout: auto;
 }
 
-/* ===== UTILIDADES GENERALES ===== */
 .focus {
-    font-weight: bold;
-    outline: 2px solid #64A70B;
+  font-weight: bold;
 }
 
 .hidden {
@@ -76,200 +42,149 @@ h2.masterH2 {
 }
 
 .hover {
-    background-color: #E8F5E9 !important;
-    transition: background-color 0.2s ease;
+  background-color: #ffffbb;
 }
 
-/* ===== TABLA DE REPORTE PRINCIPAL ===== */
 .reportTable {
-    font-family: 'Helvetica Neue', Helvetica, Arial, Noto Sans TC, Noto Sans SC, sans-serif;
-    color: #7a7a7a;
-    border-collapse: collapse;
-    border-spacing: 0;
-    table-layout: fixed;
-    width: 100%;
-    background-color: #FFFFFF;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-family: Open Sans,Helvetica,Arial,Noto Sans TC, Noto Sans SC,sans-serif;
+  color: #696969;
+  border-collapse: collapse;
+  border-spacing: 3px;
+  table-layout: fixed;
 }
 
-/* ===== ENCABEZADOS BASE ===== */
 th.headerCell {
-    padding: 10px 8px;
-    border-bottom: 2px solid #FFFFFF;
-    border-right: 1px solid #FFFFFF;
-    text-align: center;
-    font-weight: 600;
-    font-size: 12px;
-    background-color: #205C40; /* Verde oscuro corporativo */
-    color: #FFFFFF;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+  background-color: #ccd8e4;
+  padding: 5px;
+  border-bottom: 1px solid #BDC3C7;
 }
 
-/* ===== ENCABEZADOS DE DIMENSIONES ===== */
 .headerCell.dimension {
-    background-color: #64A70B; /* Verde medio */
-    color: #FFFFFF;
-    border-right: 1px solid #FFFFFF;
+  background-color: #e4ecf3;
+  border-right: 1px solid #BDC3C7; 
 }
 
-/* ===== ENCABEZADOS PIVOT ===== */
 .headerCell.pivot {
-    background-color: #64A70B; /* Verde medio */
-    color: #FFFFFF;
-    border-right: 1px solid #FFFFFF;
+  background-color: #ccd8e4;
+  border-right: 1px solid #BDC3C7; 
 }
 
-/* ===== ENCABEZADOS DE MEDIDAS ===== */
 .headerCell.measure {
-    background-color: #205C40; /* Verde medio */
-    color: #FFFFFF;
-    border-left: 1px solid #FFFFFF;
-    text-aling: center;
+  background-color: #e4d0bd;
+  border-left: 1px solid #BDC3C7; 
 }
 
-/* ===== ENCABEZADOS DE CÁLCULOS ===== */
 .headerCell.measure.calculation {
-    background-color: #64A70B; /* Verde medio */
-    color: #FFFFFF;
-    border-left: 1px solid #FFFFFF;
+  background-color: #c9dfc5;
+  border-left: 1px solid #BDC3C7;
 }
 
-/* ===== ENCABEZADOS TRANSPUESTOS ===== */
 .headerCell.transposed.dimension {
-    background-color: #64A70B;
+  background-color: #e4ecf3;
 }
 
 .headerCell.transposed.dimension.merged {
-    background-color: #64A70B !important;
+  background-color: #e4ecf3 !important;
 }
 
-/* ===== CELDAS DE ÍNDICE ===== */
-.indexCell {
-    vertical-align: middle;
-    padding: 8px 12px;
-    border-bottom: 1px solid #E0E0E0;
-    background-color: #F9F9F9;
-    color: #555555;
-    text-align: left;
-    font-weight: 500;
+/* .headerCell.dimension.headerRow {
+  background-color: #ccd8e4;
+  border-right: 1px solid #BDC3C7;
 }
 
-.indexCell.transposed {
-    font-weight: 600;
-    text-align: center;
+.headerCell.pivot.headerRow {
+  background-color: #ccd8e4;
+  border-right: 1px solid #BDC3C7;
 }
 
-.indexCell.transposed.pivot {
-    background-color: #64A70B; /* Verde medio */
-    color: #FFFFFF;
-}
+.headerCell.measure.headerRow {
+  background-color: #ccd8e4;
+  border-left: 1px solid #BDC3C7;
+} */
 
-.indexCell.transposed.dimension {
-    background-color: #64A70B; /* Verde medio */
-    color: #FFFFFF;
-}
-
-.indexCell.transposed.measure {
-    background-color: #64A70B; /* Verde medio */
-    color: #FFFFFF;
-}
-
-.indexCell.transposed.calculation {
-    background-color: #64A70B; /* Verde medio */
-    color: #FFFFFF;
-}
-
-/* ===== ÍNDICES TRANSPUESTOS FUSIONADOS ===== */
-.indexCell.transposed.pivot.merged {
-    background-color: #64A70B !important;
-}
-
-.indexCell.transposed.dimension.merged {
-    background-color: #64A70B !important;
-}
-
-.indexCell.transposed.measure.merged {
-    background-color: #64A70B !important;
-}
-
-.indexCell.transposed.calculation.merged {
-    background-color: #64A70B !important;
-}
-
-/* ===== CELDAS DE DATOS ===== */
 .rowCell {
-    vertical-align: middle;
-    padding: 8px 10px;
-    border-bottom: 1px solid #E0E0E0;
-    background-color: #F2F2F2;
-    color: #555555;
+  vertical-align: super;
+  padding-left: 5px;
+  border-bottom: 1px solid #BDC3C7; 
 }
 
 .rowCell.merged {
-    background-color: #FAFAFA !important;
-    color: #7a7a7a !important;
+  background-color: #ffffff !important;
 }
 
-/* ===== ALINEACIÓN DE DATOS ===== */
+.indexCell.transposed {
+  font-weight: bold;
+}
+
+.indexCell.transposed.pivot {
+  background-color: #ccd8e4;
+}
+
+.indexCell.transposed.dimension {
+  background-color: #e4ecf3;
+}
+
+.indexCell.transposed.measure {
+  background-color: #e4d0bd;
+}
+
+.indexCell.transposed.calculation {
+  background-color: #c9dfc5;
+}
+
+.indexCell.transposed.pivot.merged {
+  background-color: #ccd8e4 !important;
+}
+
+.indexCell.transposed.dimension.merged {
+  background-color: #e4ecf3 !important;
+}
+
+.indexCell.transposed.measure.merged {
+  background-color: #e4d0bd !important;
+}
+
+.indexCell.transposed.calculation.merged {
+  background-color: #c9dfc5 !important;
+}
+
 .nonNumeric {
-    text-align: left;
+  text-align: left;
 }
 
 .numeric {
-    text-align: right;
-    font-variant-numeric: tabular-nums;
+  text-align: right;
 }
 
-/* ===== VALORES NEGATIVOS ===== */
 .negative {
-    color: #D32F2F;
-    font-weight: 500;
+  color: red;
 }
 
-/* ===== ESTIMACIONES ===== */
 .estimate {
-    color: #9E9E9E !important;
-    font-style: italic;
+  color: darkgray !important;
 }
 
-/* ===== ÍNDICE SIMPLE ===== */
 .singleIndex {
-    padding-left: 20px !important;
+  padding-left: 15px !important;
 }
 
-/* ===== SUBTOTALES ===== */
 .subtotal {
-    font-style: italic;
-    font-weight: 600;
-    background-color: #E8E8E8;
-    color: #333333;
-    border-top: 1px solid #BDBDBD;
+  font-style: italic;
+  font-weight: bold;
+  background: #D3D3D3;
 }
 
-/* ===== TOTALES ===== */
 .total {
-    border-top: 3px double #205C40 !important; /* Verde oscuro */
-    font-weight: 700 !important;
-    background-color: #F0F4F0;
-    color: #205C40; /* Verde oscuro */
-    font-size: 13px;
+  border-top: 2px solid #696969 !important;
+  font-weight: bold !important;
 }
 
 .total.transposed {
-    border-top: 0px !important;
-    border-left: 3px double #205C40;
-    background-color: #E8E8E8;
+  border-top: 0px !important;
+  background: #D3D3D3;
 }
 
-/* ===== ELEMENTOS ANIMADOS ===== */
 .rectElem.animated {
-    margin: 4px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    transition: all 0.3s ease;
-}
-
-.rectElem.animated:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  font-family: Open Sans,Helvetica,Arial,sans-serif;
+  margin: 4px;
 }
