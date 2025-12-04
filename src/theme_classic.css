@@ -50,7 +50,6 @@
   color: #525252;
   border-collapse: collapse;
   border-spacing: 6px;
-  table-layout: fixed;
 }
 
 th.headerCell {
@@ -63,7 +62,6 @@ th.headerCell {
   background-color: #64A70B; /* Verde medio */ 
   border-right: 1px solid #FFFFFF; 
   color: #FFFFFF; /* Color de titulo */ 
-  text-align: center;
 }
 
 .headerCell.pivot {
@@ -75,7 +73,7 @@ th.headerCell {
   background-color: #205C40; /* Verde Oscuro */ 
   border-left: 1px solid #BDC3C7; 
   color: #FFFFFF; /* Color de titulo */ 
-  text-align: center;
+  text-align: center  !important; 
 }
 
 .headerCell.measure.calculation {
