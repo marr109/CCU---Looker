@@ -28,17 +28,9 @@
   table-layout: auto;
 }
 
-.focus {
-  font-weight: bold;
-}
-
-.hidden {
-    display: none;
-}
-
-.hover {
-  background-color: #f0f9ff;
-}
+.focus { font-weight: bold; }
+.hidden { display: none; }
+.hover { background-color: #f0f9ff; }
 
 .reportTable {
   font-family: Open Sans,Helvetica,Arial,Noto Sans TC, Noto Sans SC,sans-serif;
@@ -48,7 +40,7 @@
   table-layout: fixed;
 }
 
-/* HEADER GENERAL (verde oscuro) */
+/* ===== HEADER GENERAL (verde oscuro) ===== */
 th.headerCell {
   background-color: #205C40;
   padding: 5px;
@@ -56,7 +48,7 @@ th.headerCell {
   color: #ffffff;
 }
 
-/* HEADER DIMENSIONES (verde claro) */
+/* ===== DIMENSIONES - HEADER (verde claro) ===== */
 .headerCell.dimension,
 .headerCell.pivot,
 .headerCell.transposed.dimension,
@@ -66,7 +58,7 @@ th.headerCell {
   border-right: 1px solid #8EB9A9;
 }
 
-/* HEADER MÉTRICAS (verde oscuro) */
+/* ===== MÉTRICAS - HEADER (verde oscuro) ===== */
 .headerCell.measure,
 .headerCell.measure.calculation {
   background-color: #205C40 !important;
@@ -74,24 +66,19 @@ th.headerCell {
   border-left: 1px solid #18432F;
 }
 
-/* CELDAS BASE */
+/* ===== CELDAS NORMALES (gris claro) ===== */
+td.dimension,
+td.measure,
 .rowCell {
-  vertical-align: super;
-  padding-left: 5px;
-  border-bottom: 1px solid #e2e8f0;
-  color: #2d3748;
+  background-color: #F5F7F9 !important;
+  color: #2d3748 !important;
 }
 
 .rowCell.merged {
   background-color: #f7fafc !important;
 }
 
-/* TRANSPOSED INDEX CELLS */
-.indexCell.transposed {
-  font-weight: bold;
-}
-
-/* DIMENSIONES TRANSPOSED (verde claro) */
+/* ===== CELDAS TRANSPOSED DIMENSIONES (verde claro) ===== */
 .indexCell.transposed.dimension,
 .indexCell.transposed.pivot,
 .indexCell.transposed.dimension.merged {
@@ -99,7 +86,7 @@ th.headerCell {
   color: #000000 !important;
 }
 
-/* MÉTRICAS TRANSPOSED (verde oscuro) */
+/* ===== CELDAS TRANSPOSED MÉTRICAS (verde oscuro) ===== */
 .indexCell.transposed.measure,
 .indexCell.transposed.calculation,
 .indexCell.transposed.measure.merged,
@@ -108,15 +95,16 @@ th.headerCell {
   color: #ffffff !important;
 }
 
-/* ALINEACIONES */
+.indexCell.transposed { font-weight: bold; }
+
+/* ===== FORMATO GENERAL ===== */
 .nonNumeric { text-align: left; }
 .numeric { text-align: right; }
-
 .negative { color: #dc2626; }
 .estimate { color: #6b7280 !important; }
 .singleIndex { padding-left: 15px !important; }
 
-/* SUBTOTALES (verde clarito) */
+/* ===== SUBTOTALES (verde clarito) ===== */
 .subtotal,
 .subtotal td,
 .subtotal th {
@@ -126,7 +114,7 @@ th.headerCell {
   font-weight: bold;
 }
 
-/* TOTALES (verde oscuro + blanco) */
+/* ===== TOTALES (verde oscuro) ===== */
 .total,
 .total td,
 .total th {
@@ -141,20 +129,8 @@ th.headerCell {
   color: #ffffff !important;
 }
 
-/* ELEMENTOS ANIMADOS */
+/* ===== ANIMADOS ===== */
 .rectElem.animated {
   font-family: Open Sans,Helvetica,Arial,sans-serif;
   margin: 4px;
-}
-
-/* === DIMENSIONES EN TABLA (verde claro) === */
-td.dimension {
-  background-color: #A7D7C5 !important;
-  color: #000000 !important;
-}
-
-/* === MÉTRICAS EN TABLA (verde oscuro) === */
-td.measure {
-  background-color: #205C40 !important;
-  color: #FFFFFF !important;
 }
