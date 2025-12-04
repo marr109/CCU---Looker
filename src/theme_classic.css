@@ -87,8 +87,8 @@ th.headerCell {
   background-color: #e4ecf3 !important;
 }
 
-/* .headerCell.dimension.headerRow {
-  background-color: #ccd8e4;
+.headerCell.dimension.headerRow { 
+  background-color: #ED0707;
   border-right: 1px solid #BDC3C7;
 }
 
@@ -98,9 +98,9 @@ th.headerCell {
 }
 
 .headerCell.measure.headerRow {
-  background-color: #ccd8e4;
+  background-color: #F9F9F9;
   border-left: 1px solid #BDC3C7;
-} */
+}
 
 .rowCell {
   vertical-align: super;
