@@ -122,9 +122,10 @@ th.headerCell {
 
 /* ===== ENCABEZADOS DE MEDIDAS ===== */
 .headerCell.measure {
-    background-color: #64A70B; /* Verde medio */
+    background-color: #205C40; /* Verde medio */
     color: #FFFFFF;
     border-left: 1px solid #FFFFFF;
+    text-aling: center;
 }
 
 /* ===== ENCABEZADOS DE CÁLCULOS ===== */
