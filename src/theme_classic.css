@@ -62,6 +62,7 @@ th.headerCell {
   background-color: #64A70B; /* Verde medio */ 
   border-right: 1px solid #FFFFFF; 
   color: #FFFFFF; /* Color de titulo */ 
+  text-align: center  !important; 
 }
 
 .headerCell.pivot {
