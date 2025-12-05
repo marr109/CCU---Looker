@@ -61,7 +61,7 @@
 th.headerCell {
   background-color: #ccd8e4;
   /* CAMBIO CLAVE: Aumento de 5px a 10px */
-  padding: 10px; 
+  padding: 5px; 
   border-bottom: 1px solid #BDC3C7;
 }
 
