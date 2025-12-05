@@ -126,7 +126,7 @@ th.headerCell {
 }
 
 .indexCell.transposed.pivot {
-  background-color: #ccd8e4; 
+  background-color: #64A70B; 
   color: #000000 !important;
 }
 
@@ -147,7 +147,7 @@ th.headerCell {
 }
 
 .indexCell.transposed.pivot.merged {
-  background-color: #ccd8e4 !important;
+  background-color: #64A70B !important;
   color: #000000;
 }
 
