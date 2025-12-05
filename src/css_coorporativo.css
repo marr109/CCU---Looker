@@ -112,7 +112,7 @@ th.headerCell {
 /* Transposed colors ajustados para respetar el original */
 .indexCell.transposed.dimension {
   background-color: #64A70B !important; 
-  color: #000000;
+  color: #000000 !important;
 }
 
 .indexCell.transposed.measure {
