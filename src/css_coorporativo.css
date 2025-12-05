@@ -54,22 +54,22 @@ th.headerCell {
 }
 
 .headerCell.dimension {
-  background-color: #64A70B; 
-  border-right: 1px solid #FFFFFF; 
-  color: #FFFFFF; 
-  text-align: center !important; 
+  background-color: #64A70B; /* Verde medio */
+  border-right: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  text-align: center !important;
 }
 
 .headerCell.pivot {
   background-color: #ccd8e4;
-  border-right: 1px solid #BDC3C7; 
+  border-right: 1px solid #BDC3C7;
 }
 
 .headerCell.measure {
-  background-color: #205C40; 
-  border-left: 1px solid #BDC3C7; 
-  color: #FFFFFF; 
-  text-align: center !important; 
+  background-color: #205C40; /* Verde Oscuro */
+  border-left: 1px solid #BDC3C7;
+  color: #FFFFFF;
+  text-align: center !important;
   vertical-align: middle;
 }
 
@@ -89,16 +89,16 @@ th.headerCell {
 .rowCell {
   vertical-align: super;
   padding-left: 5px;
-  border-bottom: 1px solid #BDC3C7; 
+  border-bottom: 1px solid #BDC3C7;
 }
 
 /* Diferenciar métricas y dimensiones en filas */
 .rowCell.dimension {
-  background-color: #E8F4E8 !important;
+  background-color: #E8F4E8 !important; /* gris claro */
 }
 
 .rowCell.measure {
-  background-color: #F2F2F2 !important;
+  background-color: #F2F2F2 !important; /* verde claro */
 }
 
 .rowCell.merged {
@@ -109,31 +109,42 @@ th.headerCell {
   font-weight: bold;
 }
 
-/* Transposed colors ajustados para respetar el original */
+/* --- MODIFICACIONES PARA TEXTO NEGRO EN DIMENSIONES TRANSPUESTAS --- */
+
+/* 1. Dimensiones (e.g., XD, XDD, XDXDXD) */
 .indexCell.transposed.dimension {
-  background-color: #64A70B !important; 
-  color: #000000 !important;
+  background-color: #64A70B !important;
+  color: #000000 !important; /* Texto negro forzado */
 }
 
+/* 2. Pivotes (si se usan como dimensión transpuesta) */
+.indexCell.transposed.pivot {
+  background-color: #64A70B;
+  color: #000000 !important; /* Texto negro forzado */
+}
+
+/* 3. Celdas de Dimensión Transpuesta Fusionadas */
+.indexCell.transposed.dimension.merged {
+  background-color: #64A70B !important;
+  color: #000000 !important; /* Texto negro forzado */
+}
+
+/* 4. Celdas de Pivote Transpuesto Fusionadas */
+.indexCell.transposed.pivot.merged {
+  background-color: #64A70B !important;
+  color: #000000 !important; /* Texto negro forzado */
+}
+
+/* ------------------------------------------------------------------- */
+
 .indexCell.transposed.measure {
-  background-color: #205C40 !important; 
-  color: #FFFFFF;
+  background-color: #205C40 !important; /* Verde Oscuro */
+  color: #FFFFFF; /* Mantiene texto blanco para buen contraste */
 }
 
 .indexCell.transposed.calculation {
-  background-color: #c9dfc5; 
+  background-color: #c9dfc5;
   color: #000000;
-}
-
-.indexCell.transposed.pivot {
-  background-color: #64A70B; 
-  color: #000000 !important;
-}
-
-/* Fusionadas transpuestas */
-.indexCell.transposed.dimension.merged {
-  background-color: #64A70B !important;
-  color: #FFFFFF;
 }
 
 .indexCell.transposed.measure.merged {
@@ -141,13 +152,7 @@ th.headerCell {
   color: #FFFFFF;
 }
 
-/* modificado */
 .indexCell.transposed.calculation.merged {
-  background-color: #64A70B !important; 
-  color: #000000;
-}
-
-.indexCell.transposed.pivot.merged {
   background-color: #64A70B !important;
   color: #000000;
 }
@@ -182,7 +187,7 @@ th.headerCell {
   border-top: 2px solid #696969 !important;
   font-weight: bold !important;
   background-color: #205C40 !important;
-  color: #000000; 
+  color: #000000;
 }
 
 .total.transposed {
