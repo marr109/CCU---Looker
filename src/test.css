@@ -55,12 +55,12 @@
 }
 
 /* -------------------------------------------------------------------------------------------- */
-/* CAMBIOS PARA MAYOR ESPACIADO INTERNO (PADDING) */
+/* CAMBIOS PARA MAYOR ESPACIADO INTERNO (HEADER) */
 /* -------------------------------------------------------------------------------------------- */
 
 th.headerCell {
   background-color: #ccd8e4;
-  /* CAMBIO CLAVE: Aumento de 5px a 10px */
+  /* CAMBIO CLAVE: Mantenemos el padding original */
   padding: 5px; 
   border-bottom: 1px solid #BDC3C7;
 }
@@ -98,21 +98,6 @@ th.headerCell {
 .headerCell.transposed.dimension.merged {
   background-color: #e4ecf3 !important;
 }
-
-/* .headerCell.dimension.headerRow {
-  background-color: #ccd8e4;
-  border-right: 1px solid #BDC3C7;
-}
-
-.headerCell.pivot.headerRow {
-  background-color: #ccd8e4;
-  border-right: 1px solid #BDC3C7;
-}
-
-.headerCell.measure.headerRow {
-  background-color: #ccd8e4;
-  border-left: 1px solid #BDC3C7;
-} */
 
 /* -------------------------------------------------------------------------------------------- */
 /* MODIFICACIÓN PARA AUMENTAR EL PADDING DE LAS CELDAS DE DATOS (.rowCell) */
@@ -184,11 +169,19 @@ th.headerCell {
   padding-left: 15px !important;
 }
 
+/* -------------------------------------------------------------------------------------------- */
+/* MANTENIENDO SUBTOTES EN GRIS CLARO ORIGINAL */
+/* -------------------------------------------------------------------------------------------- */
+
 .subtotal {
   font-style: italic;
   font-weight: bold;
-  background: #D3D3D3;
+  background: #D3D3D3; /* Mantiene el gris original */
 }
+
+/* -------------------------------------------------------------------------------------------- */
+/* TOTALES EN VERDE OSCURO (como solicitaste anteriormente) */
+/* -------------------------------------------------------------------------------------------- */
 
 .total {
   border-top: 2px solid #696969 !important;
