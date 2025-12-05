@@ -9,17 +9,17 @@
 }
 
 #tooltip {
-    position: absolute;
-    width: auto;
-    height: auto;
-    padding: 5px;
-    background-color: white;
-    border-radius: 4px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-    pointer-events: none;
-    font-family: sans-serif;
-    font-size: 12px;
-    z-index: 2;
+  position: absolute;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  font-family: sans-serif;
+  font-size: 12px;
+  z-index: 2;
 }
 
 .tooltipTable {
@@ -34,7 +34,7 @@
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .hover {
@@ -110,25 +110,26 @@ th.headerCell {
   font-weight: bold;
 }
 
+/* MODIFICACIÓN CLAVE: FORZANDO NEGRO EN DIMENSIONES TRANSPUESTAS */
 /* Aplicado a celdas no fusionadas, forzando negro */
 .reportTable .indexCell.transposed.dimension,
 .reportTable .indexCell.transposed.pivot {
-  background-color: #000000 !important;
-  color: #000000 !important; /* FORZANDO NEGRO */
+  background-color: #64A70B !important;
+  color: #000000 !important; /* <<< NEGRO AHORA SÍ CON !IMPORTANT */
 }
 
 /* Aplicado a celdas fusionadas, forzando negro */
 .reportTable .indexCell.transposed.dimension.merged,
 .reportTable .indexCell.transposed.pivot.merged {
-  background-color: #000000 !important;
-  color: #000000 !important; /* FORZANDO NEGRO */
+  background-color: #64A70B !important;
+  color: #000000 !important; /* <<< NEGRO AHORA SÍ CON !IMPORTANT */
 }
 
-/* Aplicado a totales, por si son la fuente del blanco */
+/* Aplicado a totales transpuestos, por si son la fuente del blanco */
 .total.transposed {
   border-top: 0px !important;
   background: #D3D3D3;
-  color: #000000 !important; /* FORZANDO NEGRO en totales transpuestos */
+  color: #000000 !important; /* <<< NEGRO AHORA SÍ CON !IMPORTANT */
 }
 
 /* -------------------------------------------------------------------------------------------- */
@@ -180,11 +181,12 @@ th.headerCell {
   background: #D3D3D3;
 }
 
+/* MODIFICACIÓN CLAVE: FORZANDO NEGRO EN TOTALES */
 .total {
   border-top: 2px solid #696969 !important;
   font-weight: bold !important;
   background-color: #205C40 !important;
-  color: #000000;
+  color: #000000 !important; /* <<< NEGRO AHORA SÍ CON !IMPORTANT */
 }
 
 .rectElem.animated {
