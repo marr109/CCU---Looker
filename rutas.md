@@ -2,4 +2,7 @@ tabla pivot: https://rawcdn.githack.com/marr109/CCU---Looker/8eafbc43962e08aec18
 
 tabla: https://rawcdn.githack.com/marr109/CCU---Looker/63634849888fee8835a9bef450ceb4a32de5e0d5/css_coorporativo2.css
 
-tabla para conjuntos: https://rawcdn.githack.com/marr109/CCU---Looker/e7acfc1b78024216d2fe75d71afc271ba898478e/src/test.css
+tabla para conjuntos: 
+
+1.- https://rawcdn.githack.com/marr109/CCU---Looker/e7acfc1b78024216d2fe75d71afc271ba898478e/src/test.css
+2.- https://rawcdn.githack.com/marr109/CCU---Looker/acead1eaf45943b16d9f5b9c21fb79ab2a4d3fc7/src/test.css
