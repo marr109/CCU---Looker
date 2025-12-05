@@ -114,9 +114,13 @@ th.headerCell {
   border-left: 1px solid #BDC3C7;
 } */
 
+/* -------------------------------------------------------------------------------------------- */
+/* MODIFICACIÓN PARA AUMENTAR EL PADDING DE LAS CELDAS DE DATOS (.rowCell) */
+/* -------------------------------------------------------------------------------------------- */
+
 .rowCell {
-  vertical-align: super;
-  padding-left: 5px;
+  vertical-align: middle; /* Cambiado de 'super' a 'middle' para mejor alineación */
+  padding: 8px 5px; /* MODIFICACIÓN CLAVE: Aumentado el padding arriba/abajo */
   border-bottom: 1px solid #BDC3C7; 
 }
 
