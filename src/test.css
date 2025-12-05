@@ -60,18 +60,24 @@ th.headerCell {
 }
 
 .headerCell.dimension {
-  background-color: #e4ecf3;
-  border-right: 1px solid #64A70B; 
+  background-color: #64A70B;
+  border-right: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  text-align: center !important;
 }
 
 .headerCell.pivot {
   background-color: #ccd8e4;
   border-right: 1px solid #BDC3C7; 
+  align
 }
 
 .headerCell.measure {
-  background-color: #205C40;
-  border-left: 1px solid #BDC3C7; 
+  background-color: #205C40; /* Verde Oscuro */
+  border-left: 1px solid #BDC3C7;
+  color: #FFFFFF;
+  text-align: center !important;
+  vertical-align: middle;
 }
 
 .headerCell.measure.calculation {
