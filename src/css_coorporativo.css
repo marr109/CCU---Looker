@@ -141,8 +141,9 @@ th.headerCell {
   color: #FFFFFF;
 }
 
+/* modificado */
 .indexCell.transposed.calculation.merged {
-  background-color: #c9dfc5 !important;
+  background-color: #64A70B !important; 
   color: #000000;
 }
 
