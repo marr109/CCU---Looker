@@ -127,7 +127,7 @@ th.headerCell {
 
 .indexCell.transposed.pivot {
   background-color: #ccd8e4; 
-  color: #000000;
+  color: #000000 !important;
 }
 
 /* Fusionadas transpuestas */
