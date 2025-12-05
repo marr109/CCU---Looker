@@ -193,6 +193,8 @@ th.headerCell {
 .total {
   border-top: 2px solid #696969 !important;
   font-weight: bold !important;
+  background: #205C40 !important;
+  color: #FFFFFF !important;
 }
 
 .total.transposed {
