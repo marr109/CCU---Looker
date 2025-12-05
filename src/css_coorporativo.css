@@ -44,12 +44,19 @@
   font-family: Open Sans, Helvetica, Arial, Noto Sans TC, Noto Sans SC, sans-serif;
   color: #525252;
   border-collapse: collapse;
-  border-spacing: 6px;
+  /* Aumento el espaciado entre celdas si se usara `border-separate` */
+  /* border-spacing: 6px; */ 
+  border-spacing: 0px; /* Ya estaba en collapse, lo mantengo a 0 si es el caso */
 }
+
+/* -------------------------------------------------------------------------------------------- */
+/* CAMBIOS PARA MAYOR ESPACIADO INTERNO (PADDING) */
+/* -------------------------------------------------------------------------------------------- */
 
 th.headerCell {
   background-color: #ccd8e4;
-  padding: 5px;
+  /* CAMBIO CLAVE: Aumento de 5px a 10px */
+  padding: 10px; 
   border-bottom: 1px solid #BDC3C7;
 }
 
@@ -88,9 +95,16 @@ th.headerCell {
 
 .rowCell {
   vertical-align: super;
-  padding-left: 5px;
+  /* CAMBIO CLAVE: Aumento de 5px a 10px */
+  padding-left: 10px; 
+  /* Aseguro que el padding vertical sea consistente */
+  padding-top: 5px;
+  padding-bottom: 5px;
   border-bottom: 1px solid #BDC3C7;
 }
+
+/* -------------------------------------------------------------------------------------------- */
+
 
 /* Diferenciar métricas y dimensiones en filas */
 .rowCell.dimension {
@@ -171,7 +185,8 @@ th.headerCell {
 }
 
 .singleIndex {
-  padding-left: 15px !important;
+  /* He aumentado el padding base en .rowCell, ajusto este para mantener una diferencia visual */
+  padding-left: 20px !important; 
 }
 
 .subtotal {
