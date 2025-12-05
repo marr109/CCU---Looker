@@ -46,16 +46,22 @@
 }
 
 .reportTable {
-  font-family: Open Sans,Helvetica,Arial,Noto Sans TC, Noto Sans SC,sans-serif;
-  color: #696969;
+  font-family: Open Sans, Helvetica, Arial, Noto Sans TC, Noto Sans SC, sans-serif;
+  color: #525252;
   border-collapse: collapse;
-  border-spacing: 3px;
-  table-layout: fixed;
+  /* Aumento el espaciado entre celdas si se usara `border-separate` */
+  /* border-spacing: 6px; */ 
+  border-spacing: 0px; /* Ya estaba en collapse, lo mantengo a 0 si es el caso */
 }
+
+/* -------------------------------------------------------------------------------------------- */
+/* CAMBIOS PARA MAYOR ESPACIADO INTERNO (PADDING) */
+/* -------------------------------------------------------------------------------------------- */
 
 th.headerCell {
   background-color: #ccd8e4;
-  padding: 5px;
+  /* CAMBIO CLAVE: Aumento de 5px a 10px */
+  padding: 10px; 
   border-bottom: 1px solid #BDC3C7;
 }
 
