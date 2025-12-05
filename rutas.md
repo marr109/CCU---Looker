@@ -1,10 +1,3 @@
-https://rawcdn.githack.com/marr109/CCU---Looker/8e0205686501b45ad3e0658c5f7d5e9290306c4c/src/theme_looker.css
+tabla pivot: https://rawcdn.githack.com/marr109/CCU---Looker/8eafbc43962e08aec18ecdc9ba9c72327659dc6e/src/theme_looker_2.css
 
-
-
-https://rawcdn.githack.com/marr109/CCU---Looker/8eafbc43962e08aec18ecdc9ba9c72327659dc6e/src/theme_looker_2.css
-
-
-
-
-https://rawcdn.githack.com/marr109/CCU---Looker/27aeab5341d7640bb25e8d383fb8a69c7a612ef4/src/theme_classic.css
+tabla: https://rawcdn.githack.com/marr109/CCU---Looker/63634849888fee8835a9bef450ceb4a32de5e0d5/css_coorporativo2.css
