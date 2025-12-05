@@ -1,4 +1,4 @@
-/* [Código completo con máxima especificidad para el color negro] */
+/* [Código completo con máxima especificidad para el color negro y cambio de fondo en header] */
 @font-face {
   font-family: 'Noto Sans TC';
   src: url('./fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.woff2') format('woff2');
@@ -54,10 +54,11 @@ th.headerCell {
   border-bottom: 1px solid #BDC3C7;
 }
 
+/* 🟢 CAMBIO: DIMENSIONES A VERDE OSCURO (#205C40) */
 .headerCell.dimension {
-  background-color: #64A70B; /* Verde medio */
+  background-color: #205C40; /* Verde Oscuro (para dimensión) */
   border-right: 1px solid #FFFFFF;
-  color: #FFFFFF;
+  color: #FFFFFF; /* Texto blanco para buen contraste */
   text-align: center !important;
 }
 
@@ -66,10 +67,11 @@ th.headerCell {
   border-right: 1px solid #BDC3C7;
 }
 
+/* 💡 CAMBIO: MÉTRICAS A VERDE CLARO (#64A70B) */
 .headerCell.measure {
-  background-color: #205C40; /* Verde Oscuro */
+  background-color: #64A70B; /* Verde Claro (para métrica) */
   border-left: 1px solid #BDC3C7;
-  color: #FFFFFF;
+  color: #FFFFFF; /* Texto blanco */
   text-align: center !important;
   vertical-align: middle;
 }
@@ -79,12 +81,14 @@ th.headerCell {
   border-left: 1px solid #BDC3C7;
 }
 
+/* 🟢 CAMBIO: DIMENSIÓN TRANSPUESTA A VERDE OSCURO (#205C40) */
 .headerCell.transposed.dimension {
-  background-color: #64A70B;
+  background-color: #205C40;
 }
 
+/* 🟢 CAMBIO: DIMENSIÓN TRANSPUESTA FUSIONADA A VERDE OSCURO (#205C40) */
 .headerCell.transposed.dimension.merged {
-  background-color: #64A70B !important;
+  background-color: #205C40 !important;
 }
 
 .rowCell {
@@ -111,32 +115,33 @@ th.headerCell {
 }
 
 /* MODIFICACIÓN CLAVE: FORZANDO NEGRO EN DIMENSIONES TRANSPUESTAS */
-/* Aplicado a celdas no fusionadas, forzando negro */
+/* 🟢 CAMBIO: FONDO A VERDE OSCURO (#205C40) y color de texto NEGRO forzado */
 .reportTable .indexCell.transposed.dimension,
 .reportTable .indexCell.transposed.pivot {
-  background-color: #64A70B !important;
-  color: #000000 !important; /* <<< NEGRO AHORA SÍ CON !IMPORTANT */
+  background-color: #205C40 !important; /* Verde Oscuro */
+  color: #000000 !important; /* Texto NEGRO forzado (ajusta si el contraste es malo) */
 }
 
-/* Aplicado a celdas fusionadas, forzando negro */
+/* 🟢 CAMBIO: FONDO A VERDE OSCURO (#205C40) y color de texto NEGRO forzado */
 .reportTable .indexCell.transposed.dimension.merged,
 .reportTable .indexCell.transposed.pivot.merged {
-  background-color: #64A70B !important;
-  color: #000000 !important; /* <<< NEGRO AHORA SÍ CON !IMPORTANT */
+  background-color: #205C40 !important; /* Verde Oscuro */
+  color: #000000 !important; /* Texto NEGRO forzado (ajusta si el contraste es malo) */
 }
 
 /* Aplicado a totales transpuestos, por si son la fuente del blanco */
 .total.transposed {
   border-top: 0px !important;
   background: #D3D3D3;
-  color: #000000 !important; /* <<< NEGRO AHORA SÍ CON !IMPORTANT */
+  color: #000000 !important; /* NEGRO forzado */
 }
 
 /* -------------------------------------------------------------------------------------------- */
 
 
+/* 💡 CAMBIO: MÉTRICA TRANSPUESTA A VERDE CLARO (#64A70B) */
 .indexCell.transposed.measure {
-  background-color: #205C40 !important; /* Verde Oscuro */
+  background-color: #64A70B !important; /* Verde Claro */
   color: #FFFFFF; /* Mantiene texto blanco para buen contraste */
 }
 
@@ -145,8 +150,9 @@ th.headerCell {
   color: #000000;
 }
 
+/* 💡 CAMBIO: MÉTRICA TRANSPUESTA FUSIONADA A VERDE CLARO (#64A70B) */
 .indexCell.transposed.measure.merged {
-  background-color: #205C40 !important;
+  background-color: #64A70B !important;
   color: #FFFFFF;
 }
 
@@ -182,11 +188,12 @@ th.headerCell {
 }
 
 /* MODIFICACIÓN CLAVE: FORZANDO NEGRO EN TOTALES */
+/* 🟢 Cambio de color de fondo del total por coherencia con la dimensión */
 .total {
   border-top: 2px solid #696969 !important;
   font-weight: bold !important;
-  background-color: #205C40 !important;
-  color: #000000 !important; /* <<< NEGRO AHORA SÍ CON !IMPORTANT */
+  background-color: #205C40 !important; /* Verde Oscuro (asumiendo que el total es una dimensión/resumen) */
+  color: #000000 !important; /* NEGRO forzado */
 }
 
 .rectElem.animated {
