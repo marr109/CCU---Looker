@@ -110,19 +110,17 @@ th.headerCell {
   font-weight: bold;
 }
 
-/* --- SOLUCIÓN DE MÁXIMA ESPECIFICIDAD PARA FORZAR TEXTO NEGRO (dimensiones transpuestas) --- */
-
 /* Aplicado a celdas no fusionadas, forzando negro */
 .reportTable .indexCell.transposed.dimension,
 .reportTable .indexCell.transposed.pivot {
-  background-color: #64A70B !important;
+  background-color: #000000 !important;
   color: #000000 !important; /* FORZANDO NEGRO */
 }
 
 /* Aplicado a celdas fusionadas, forzando negro */
 .reportTable .indexCell.transposed.dimension.merged,
 .reportTable .indexCell.transposed.pivot.merged {
-  background-color: #64A70B !important;
+  background-color: #000000 !important;
   color: #000000 !important; /* FORZANDO NEGRO */
 }
 
