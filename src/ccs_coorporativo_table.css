@@ -172,8 +172,9 @@ th.headerCell {
   text-align: left;
 }
 
+
 .numeric {
-  text-align: center;
+  text-align: center !important;
 }
 
 .negative {
