@@ -1,0 +1,209 @@
+@font-face {
+  font-family: 'Noto Sans TC';
+  src: url('./fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans SC';
+  src: url('./fonts/noto-sans-sc-v11-latin_chinese-simplified-regular.woff2') format('woff2');
+}
+
+#tooltip {
+  position: absolute;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  font-family: sans-serif;
+  font-size: 12px;
+  z-index: 2;
+}
+
+.tooltipTable {
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  border: 0px;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.focus {
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+.hover {
+  background-color: #ffffbb;
+}
+
+.reportTable {
+  font-family: Open Sans, Helvetica, Arial, Noto Sans TC, Noto Sans SC, sans-serif;
+  color: #525252;
+  border-collapse: collapse;
+  /* Aumento el espaciado entre celdas si se usara `border-separate` */
+  /* border-spacing: 6px; */ 
+  border-spacing: 0px; /* Ya estaba en collapse, lo mantengo a 0 si es el caso */
+}
+
+/* -------------------------------------------------------------------------------------------- */
+/* CAMBIOS PARA MAYOR ESPACIADO INTERNO (PADDING) */
+/* -------------------------------------------------------------------------------------------- */
+
+th.headerCell {
+  background-color: #ccd8e4;
+  /* CAMBIO CLAVE: Aumento de 5px a 10px */
+  padding: 10px; 
+  border-bottom: 1px solid #BDC3C7;
+}
+
+.headerCell.dimension {
+  background-color: #64A70B; /* Verde medio */
+  border-right: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  text-align: center !important;
+}
+
+.headerCell.pivot {
+  background-color: #ccd8e4;
+  border-right: 1px solid #BDC3C7;
+}
+
+.headerCell.measure {
+  background-color: #205C40; /* Verde Oscuro */
+  border-left: 1px solid #BDC3C7;
+  color: #FFFFFF;
+  text-align: center !important;
+  vertical-align: middle;
+}
+
+.headerCell.measure.calculation {
+  background-color: #c9dfc5;
+  border-left: 1px solid #BDC3C7;
+}
+
+.headerCell.transposed.dimension {
+  background-color: #64A70B;
+}
+
+.headerCell.transposed.dimension.merged {
+  background-color: #64A70B !important;
+}
+
+.rowCell {
+  vertical-align: super;
+  /* CAMBIO CLAVE: Aumento de 5px a 10px */
+  padding-left: 10px; 
+  /* Aseguro que el padding vertical sea consistente */
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #BDC3C7;
+}
+
+/* -------------------------------------------------------------------------------------------- */
+
+
+/* Diferenciar métricas y dimensiones en filas */
+.rowCell.dimension {
+  background-color: #E8F4E8 !important; /* gris claro */
+}
+
+.rowCell.measure {
+  background-color: #F2F2F2 !important; /* verde claro */
+}
+
+.rowCell.merged {
+  background-color: #ffffff !important;
+}
+
+.indexCell.transposed {
+  font-weight: bold;
+}
+
+/* MODIFICACIÓN CLAVE: FORZANDO NEGRO EN DIMENSIONES TRANSPUESTAS */
+/* Aplicado a celdas no fusionadas, forzando negro */
+.reportTable .indexCell.transposed.dimension,
+.reportTable .indexCell.transposed.pivot {
+  background-color: #64A70B !important;
+  color: #000000 !important; /* <<< NEGRO AHORA SÍ CON !IMPORTANT */
+}
+
+/* Aplicado a celdas fusionadas, forzando negro */
+.reportTable .indexCell.transposed.dimension.merged,
+.reportTable .indexCell.transposed.pivot.merged {
+  background-color: #64A70B !important;
+  color: #000000 !important; /* <<< NEGRO AHORA SÍ CON !IMPORTANT */
+}
+
+/* Aplicado a totales transpuestos, por si son la fuente del blanco */
+.total.transposed {
+  border-top: 0px !important;
+  background: #D3D3D3;
+  color: #000000 !important; /* <<< NEGRO AHORA SÍ CON !IMPORTANT */
+}
+
+/* -------------------------------------------------------------------------------------------- */
+
+
+.indexCell.transposed.measure {
+  background-color: #205C40 !important; /* Verde Oscuro */
+  color: #FFFFFF; /* Mantiene texto blanco para buen contraste */
+}
+
+.indexCell.transposed.calculation {
+  background-color: #c9dfc5;
+  color: #000000;
+}
+
+.indexCell.transposed.measure.merged {
+  background-color: #205C40 !important;
+  color: #FFFFFF;
+}
+
+.indexCell.transposed.calculation.merged {
+  background-color: #64A70B !important;
+  color: #000000;
+}
+
+.nonNumeric {
+  text-align: left;
+}
+
+.numeric {
+  text-align: center;
+}
+
+.negative {
+  color: red;
+}
+
+.estimate {
+  color: darkgray !important;
+}
+
+.singleIndex {
+  /* He aumentado el padding base en .rowCell, ajusto este para mantener una diferencia visual */
+  padding-left: 20px !important; 
+}
+
+.subtotal {
+  font-style: italic;
+  font-weight: bold;
+  background: #D3D3D3;
+}
+
+/* MODIFICACIÓN CLAVE: FORZANDO NEGRO EN TOTALES */
+.total {
+  border-top: 2px solid #696969 !important;
+  font-weight: bold !important;
+  background-color: #205C40 !important;
+  color: #000000 !important; /* <<< NEGRO AHORA SÍ CON !IMPORTANT */
+}
+
+.rectElem.animated {
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  margin: 4px;
+}
