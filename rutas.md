@@ -7,3 +7,6 @@ tabla para conjuntos:
 1.- https://rawcdn.githack.com/marr109/CCU---Looker/e7acfc1b78024216d2fe75d71afc271ba898478e/src/test.css
 2.- https://rawcdn.githack.com/marr109/CCU---Looker/acead1eaf45943b16d9f5b9c21fb79ab2a4d3fc7/src/test.css
 3.- https://rawcdn.githack.com/marr109/CCU---Looker/490e5d047bff51e4af8e17735ea73b91f15ee1f3/src/css_centered.css
+
+4.- https://rawcdn.githack.com/marr109/CCU---Looker/b3b36d82c5e85ce45aee00817e5722892ca4ff71/src/css_centered.css
+
