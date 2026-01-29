@@ -164,11 +164,11 @@ th.headerCell {
 }
 
 .nonNumeric {
-  text-align: center !important;
+  text-align: left !important;
 }
 
 .numeric {
-  text-align: center !important;
+  text-align: rigth !important;
 }
 
 .negative {
