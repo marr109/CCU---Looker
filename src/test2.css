@@ -91,11 +91,11 @@ th.headerCell {
 }
 
 .headerCell.transposed.dimension {
-  background-color: #ccd8e4;
+  background-color: #64A70B;
 }
 
 .headerCell.transposed.dimension.merged {
-  background-color: #ccd8e4 !important;
+  background-color: #64A70B !important;
 }
 
 /* .headerCell.dimension.headerRow {
