@@ -141,6 +141,7 @@ th.headerCell {
 
 .indexCell.transposed.measure {
   background-color: #205C40;
+  color: #FFFF;
 }
 
 .indexCell.transposed.calculation {
