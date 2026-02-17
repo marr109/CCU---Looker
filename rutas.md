@@ -12,3 +12,5 @@ tabla para conjuntos:
 
 5.- https://rawcdn.githack.com/marr109/CCU---Looker/e78e22b39a84f664c27ec45441d2e77a389188e3/src/css_centered.css (center title, row left and right)
 
+6.- https://rawcdn.githack.com/marr109/CCU---Looker/7700169056526b637ee91efd95a70cf0e9c77edb/src/zzz.css
+
