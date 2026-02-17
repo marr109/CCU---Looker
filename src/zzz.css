@@ -166,12 +166,14 @@ th.headerCell {
     background-color: #ffffbb !important;
 }
 
-/* Hover automático */
+/* Hover con texto negro */
 .reportTable tr:hover td,
 .reportTable tr:hover th {
     background-color: #ffffbb !important;
+    color: #000000 !important; /* 🔥 texto negro */
     cursor: pointer;
 }
+
 
 /* ===================================================== */
 /* MISC */
