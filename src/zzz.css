@@ -1,184 +1,223 @@
-/* ===== Tipografía Base ===== */
-body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@font-face {
+  font-family: 'Noto Sans TC';
+  src: url('./fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.woff2') format('woff2')
+}
+@font-face {
+  font-family: 'Noto Sans SC';
+  src: url('./fonts/noto-sans-sc-v11-latin_chinese-simplified-regular.woff2') format('woff2')
+}
+
+#tooltip {
+    position: absolute;
+    width: auto;
+    height: auto;
+    padding: 5px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    font-family: sans-serif;
     font-size: 12px;
-    color: #7a7a7a;
-    background-color: #F7F7F7;
+    z-index: 2;
 }
 
-h1.masterH1 {
-    font-size: 16px;
-    font-weight: bold;
-    color: #205C40;
-    text-align: center;
+.tooltipTable {
+  font-family: Open Sans,Helvetica,Arial,sans-serif;
+  border: 0px;
+  border-collapse: collapse;
+  table-layout: auto;
 }
 
-h2.masterH2 {
-    font-size: 14px;
-    font-weight: bold;
-    color: #64A70B;
-    text-align: center;
+.focus {
+  font-weight: bold;
 }
 
-.masterHeader {
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    color: #145c9e;
+.hidden {
+    display: none;
 }
 
-/* ===== Tablas de Reporte ===== */
+.hover {
+  background-color: #ffffbb;
+}
+
 .reportTable {
-    font-family: 'Helvetica Neue', Helvetica, Arial, Noto Sans TC, Noto Sans SC, sans-serif;
-    color: #7a7a7a;
-    border-collapse: collapse;
-    border-spacing: 3px;
-    table-layout: fixed;
-    width: 100%;
-    text-align: center;
+  font-family: Open Sans, Helvetica, Arial, Noto Sans TC, Noto Sans SC, sans-serif;
+  color: #525252;
+  border-collapse: collapse;
+  border-spacing: 0px;
 }
 
-/* ===================================================== */
-/* HEADERS */
-/* ===================================================== */
+/* ================= HEADER CELLS ================= */
 
-/* Base headers SIN bold global */
 th.headerCell {
-    padding: 5px;
-    border-bottom: 1px solid #d3d3d3;
-    text-align: center;
-    font-weight: normal; /* 🔥 FIX: evita métricas bold */
-    background-color: #205C40 !important;
-    color: #FFFFFF !important;
+  background-color: #ccd8e4;
+  padding: 5px;
+  border-bottom: 1px solid #BDC3C7;
+  font-weight: normal; /* 🔥 evita bold global */
 }
 
-/* ===== Dimensiones (bold) ===== */
-.headerCell.dimension,
-.indexCell.transposed.dimension {
-    background-color: #64A70B;
-    color: #FFFFFF;
-    text-align: left;
-    padding-left: 10px;
-    font-weight: bold;
+/* DIMENSIONES (bold permitido) */
+.headerCell.dimension {
+  background-color: #64A70B;
+  border-right: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  text-align: center !important;
+  font-weight: bold;
 }
 
-/* ===== Medidas (NO bold) ===== */
-.headerCell.measure,
-.indexCell.transposed.measure {
-    background-color: #64A70B;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 5px 10px;
-    border-left: 4px solid #F7F7F7;
-    font-weight: normal;
+.headerCell.pivot {
+  background-color: #ccd8e4;
+  border-right: 1px solid #BDC3C7; 
+  font-weight: normal;
 }
 
-/* ===== Cálculos (NO bold) ===== */
-.headerCell.calculation,
-.indexCell.transposed.calculation {
-    background-color: #64A70B;
-    color: #FFFFFF;
-    text-align: center;
-    font-weight: normal;
+/* MEDIDAS (sin bold) */
+.headerCell.measure {
+  background-color: #205C40;
+  border-left: 1px solid #BDC3C7;
+  color: #FFFFFF;
+  text-align: center !important;
+  vertical-align: middle;
+  font-weight: normal;
 }
 
-/* ===== Pivot ===== */
-.headerCell.pivot,
+/* CALCULATED MEASURE NORMAL (sin bold) */
+.headerCell.measure.calculation {
+  background-color: #64A70B;
+  color: #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+  font-weight: normal;
+}
+
+/* ================= ROW CELLS ================= */
+
+.rowCell {
+  vertical-align: middle;
+  padding: 8px 5px;
+  border-bottom: 1px solid #BDC3C7; 
+}
+
+.rowCell.merged {
+  background-color: #ffffff !important;
+}
+
+/* ================= INDEX CELLS ================= */
+
+.indexCell.transposed {
+  font-weight: bold; /* mantener jerarquía visual */
+}
+
 .indexCell.transposed.pivot {
-    background-color: #64A70B;
-    color: #FFFFFF;
-    text-align: center;
-    font-weight: normal;
+  background-color: #ccd8e4;
 }
 
-/* ===================================================== */
-/* CELDAS */
-/* ===================================================== */
-
-.rowCell, .numeric, .nonNumeric {
-    vertical-align: middle;
-    padding: 5px;
-    border-bottom: 1px solid #d3d3d3;
-    text-align: center;
-    background-color: #FFFFFF;
-    color: #7a7a7a;
+.indexCell.transposed.dimension {
+  background-color: #64A70B;
+  border-right: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  font-weight: bold;
 }
 
-.indexCell {
-    vertical-align: middle;
-    padding: 5px;
-    border-bottom: 1px solid #d3d3d3;
-    background-color: #FFFFFF;
-    color: #7a7a7a;
-    text-align: left;
-    padding-left: 15px;
+/* MEDIDAS TRANSPUESTAS sin bold */
+.indexCell.transposed.measure {
+  background-color: #205C40;
+  color: #FFFFFF;
+  font-weight: normal;
 }
 
-/* ===== Celdas Fusionadas ===== */
-.rowCell.merged, 
-.indexCell.transposed.merged {
-    background-color: #F7F7F7 !important;
-    color: #7a7a7a !important;
+/* CALCULADAS TRANSPUESTAS sin bold */
+.indexCell.transposed.calculation {
+  background-color: #64A70B;
+  color: #FFFFFF;
+  font-weight: normal;
 }
 
-/* ===================================================== */
-/* FORMATOS ESPECIALES */
-/* ===================================================== */
+/* ================= HELPERS ================= */
+
+.nonNumeric {
+  text-align: left !important;
+}
+
+.numeric {
+  text-align: right !important;
+}
 
 .negative {
-    color: #A6093D;
+  color: red;
 }
 
 .estimate {
-    color: #7a7a7a !important;
+  color: darkgray !important;
 }
 
 .singleIndex {
-    padding-left: 15px !important;
+  padding-left: 15px !important;
 }
 
-/* ===== Subtotales (bold) ===== */
 .subtotal {
-    font-style: italic;
-    font-weight: bold;
-    background-color: #d3d3d3;
-    color: #000000;
+  font-style: italic;
+  font-weight: bold;
+  background: #D3D3D3;
 }
 
-/* ===== Totales (bold fuerte) ===== */
 .total {
-    border-top: 2px solid #000000 !important;
-    font-weight: bold !important;
-    background-color: #F7F7F7;
-    color: #000000;
+  border-top: 2px solid #696969 !important;
+  font-weight: bold !important;
 }
 
 .total.transposed {
-    border-top: 0px !important;
-    background-color: #d3d3d3;
+  border-top: 0px !important;
+  background: #D3D3D3;
 }
-
-/* ===================================================== */
-/* HOVER */
-/* ===================================================== */
-
-.hover {
-    background-color: #ffffbb !important;
-}
-
-/* Hover con texto negro */
-.reportTable tr:hover td,
-.reportTable tr:hover th {
-    background-color: #ffffbb !important;
-    color: #000000 !important; /* 🔥 texto negro */
-}
-
-
-/* ===================================================== */
-/* MISC */
-/* ===================================================== */
 
 .rectElem.animated {
-    margin: 4px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: Open Sans,Helvetica,Arial,sans-serif;
+  margin: 4px;
+}
+
+/* ===================================================== */
+/* INVERTIR COLORES EN MODO TRANSPUESTO */
+/* ===================================================== */
+
+/* DIMENSION -> verde oscuro */
+.headerCell.transposed.dimension {
+  background-color: #205C40 !important;
+  color: #FFFFFF;
+  border-right: 1px solid #BDC3C7;
+  font-weight: bold;
+}
+
+/* MEASURE -> verde claro (sin bold) */
+.headerCell.transposed.measure {
+  background-color: #64A70B !important;
+  color: #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+  font-weight: normal;
+}
+
+/* CALCULATED MEASURE TRANSPUESTO (sin bold) */
+.headerCell.transposed.measure.calculation {
+  background-color: #64A70B !important;
+  color: #FFFFFF !important;
+  border-left: 1px solid #FFFFFF;
+  font-weight: normal;
+}
+
+/* INDEX CELLS */
+.indexCell.transposed.dimension {
+  background-color: #205C40 !important;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.indexCell.transposed.measure {
+  background-color: #64A70B !important;
+  color: #FFFFFF;
+  font-weight: normal;
+}
+
+.indexCell.transposed.calculation {
+  background-color: #64A70B !important;
+  color: #FFFFFF !important;
+  font-weight: normal;
 }
