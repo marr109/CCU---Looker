@@ -27,7 +27,7 @@ h2.masterH2 {
     color: #145c9e;
 }
 
-/* ===== Tablas de Reporte ===== */
+/* ===== Tabla ===== */
 .reportTable {
     font-family: 'Helvetica Neue', Helvetica, Arial, Noto Sans TC, Noto Sans SC, sans-serif;
     color: #7a7a7a;
@@ -39,20 +39,19 @@ h2.masterH2 {
 }
 
 /* ===================================================== */
-/* HEADERS */
+/* HEADERS BASE (NEUTRALES para evitar header fantasma) */
 /* ===================================================== */
 
-/* Base headers SIN bold global */
 th.headerCell {
     padding: 5px;
     border-bottom: 1px solid #d3d3d3;
     text-align: center;
-    font-weight: normal; /* 🔥 FIX: evita métricas bold */
-    background-color: #205C40 !important;
-    color: #FFFFFF !important;
+    font-weight: normal;
+    background-color: transparent !important; /* 🔥 evita header extra */
+    color: inherit !important;
 }
 
-/* ===== Dimensiones (bold) ===== */
+/* ===== Dimensiones ===== */
 .headerCell.dimension,
 .indexCell.transposed.dimension {
     background-color: #64A70B;
@@ -62,7 +61,7 @@ th.headerCell {
     font-weight: bold;
 }
 
-/* ===== Medidas (NO bold) ===== */
+/* ===== Medidas ===== */
 .headerCell.measure,
 .indexCell.transposed.measure {
     background-color: #64A70B;
@@ -73,7 +72,7 @@ th.headerCell {
     font-weight: normal;
 }
 
-/* ===== Cálculos (NO bold) ===== */
+/* ===== Cálculos ===== */
 .headerCell.calculation,
 .indexCell.transposed.calculation {
     background-color: #64A70B;
@@ -114,7 +113,7 @@ th.headerCell {
     padding-left: 15px;
 }
 
-/* ===== Celdas Fusionadas ===== */
+/* ===== Fusionadas ===== */
 .rowCell.merged, 
 .indexCell.transposed.merged {
     background-color: #F7F7F7 !important;
@@ -122,7 +121,7 @@ th.headerCell {
 }
 
 /* ===================================================== */
-/* FORMATOS ESPECIALES */
+/* FORMATOS */
 /* ===================================================== */
 
 .negative {
@@ -137,7 +136,7 @@ th.headerCell {
     padding-left: 15px !important;
 }
 
-/* ===== Subtotales (bold) ===== */
+/* ===== Subtotales ===== */
 .subtotal {
     font-style: italic;
     font-weight: bold;
@@ -145,7 +144,7 @@ th.headerCell {
     color: #000000;
 }
 
-/* ===== Totales (bold fuerte) ===== */
+/* ===== Totales ===== */
 .total {
     border-top: 2px solid #000000 !important;
     font-weight: bold !important;
@@ -159,21 +158,17 @@ th.headerCell {
 }
 
 /* ===================================================== */
-/* HOVER */
+/* HOVER (fondo amarillo + texto negro) */
 /* ===================================================== */
 
-.hover {
-    background-color: #ffffbb !important;
-}
-
-/* Hover con texto negro */
 .reportTable tr:hover td,
-.reportTable tr:hover th {
+.reportTable tr:hover th,
+.reportTable tr:hover .headerCell,
+.reportTable tr:hover .indexCell {
     background-color: #ffffbb !important;
     color: #000000 !important; /* 🔥 texto negro */
     cursor: pointer;
 }
-
 
 /* ===================================================== */
 /* MISC */
