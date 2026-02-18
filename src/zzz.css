@@ -135,11 +135,11 @@ th.headerCell {
 /* ================= HELPERS ================= */
 
 .nonNumeric {
-  text-align: left !important;
+  text-align: center !important;
 }
 
 .numeric {
-  text-align: right !important;
+  text-align: center !important;
 }
 
 .negative {
