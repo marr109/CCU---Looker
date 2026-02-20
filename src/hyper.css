@@ -7,18 +7,13 @@
   src: url('./fonts/noto-sans-sc-v11-latin_chinese-simplified-regular.woff2') format('woff2')
 }
 
-
 #tooltip {
     position: absolute;
     width: auto;
     height: auto;
     padding: 5px;
     background-color: white;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
     border-radius: 4px;
-    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
     pointer-events: none;
     font-family: sans-serif;
@@ -33,17 +28,13 @@
   table-layout: auto;
 }
 
-.focus {
-  font-weight: bold;
-}
+.focus { font-weight: bold; }
+.hidden { display: none; }
+.hover { background-color: #ffffbb; }
 
-.hidden {
-    display: none;
-}
-
-.hover {
-  background-color: #ffffbb;
-}
+/* ============================= */
+/* TABLE BASE                   */
+/* ============================= */
 
 .reportTable {
   font-family: Open Sans, Helvetica, Arial, Noto Sans TC, Noto Sans SC, sans-serif;
@@ -52,13 +43,13 @@
   border-spacing: 0px;
 }
 
-/* -------------------------------------------------------------------------------------------- */
-/* CAMBIOS PARA MAYOR ESPACIADO INTERNO (PADDING) */
-/* -------------------------------------------------------------------------------------------- */
+/* ============================= */
+/* HEADER                       */
+/* ============================= */
 
 th.headerCell {
   background-color: #ccd8e4;
-  padding: 5px; 
+  padding: 5px;
   border-bottom: 1px solid #BDC3C7;
 }
 
@@ -87,17 +78,14 @@ th.headerCell {
   border-left: 1px solid #BDC3C7;
 }
 
-.headerCell.transposed.dimension {
-  background-color: #e4ecf3;
-}
-
+.headerCell.transposed.dimension,
 .headerCell.transposed.dimension.merged {
   background-color: #e4ecf3 !important;
 }
 
-/* -------------------------------------------------------------------------------------------- */
-/* MODIFICACIÓN PARA AUMENTAR EL PADDING DE LAS CELDAS DE DATOS (.rowCell) */
-/* -------------------------------------------------------------------------------------------- */
+/* ============================= */
+/* ROWS                         */
+/* ============================= */
 
 .rowCell {
   vertical-align: middle;
@@ -105,65 +93,26 @@ th.headerCell {
   border-bottom: 1px solid #BDC3C7; 
 }
 
-.rowCell.merged {
-  background-color: #ffffff !important;
-}
+.rowCell.merged { background-color: #ffffff !important; }
 
-.indexCell.transposed {
-  font-weight: bold;
-}
+.indexCell.transposed { font-weight: bold; }
 
-.indexCell.transposed.pivot {
-  background-color: #ccd8e4;
-}
+.indexCell.transposed.pivot { background-color: #ccd8e4; }
+.indexCell.transposed.dimension { background-color: #e4ecf3; }
+.indexCell.transposed.measure { background-color: #e4d0bd; }
+.indexCell.transposed.calculation { background-color: #c9dfc5; }
 
-.indexCell.transposed.dimension {
-  background-color: #e4ecf3;
-}
+.indexCell.transposed.pivot.merged { background-color: #ccd8e4 !important; }
+.indexCell.transposed.dimension.merged { background-color: #e4ecf3 !important; }
+.indexCell.transposed.measure.merged { background-color: #e4d0bd !important; }
+.indexCell.transposed.calculation.merged { background-color: #c9dfc5 !important; }
 
-.indexCell.transposed.measure {
-  background-color: #e4d0bd;
-}
+.nonNumeric { text-align: left !important; }
+.numeric { text-align: right !important; }
+.negative { color: red; }
+.estimate { color: darkgray !important; }
 
-.indexCell.transposed.calculation {
-  background-color: #c9dfc5;
-}
-
-.indexCell.transposed.pivot.merged {
-  background-color: #ccd8e4 !important;
-}
-
-.indexCell.transposed.dimension.merged {
-  background-color: #e4ecf3 !important;
-}
-
-.indexCell.transposed.measure.merged {
-  background-color: #e4d0bd !important;
-}
-
-.indexCell.transposed.calculation.merged {
-  background-color: #c9dfc5 !important;
-}
-
-.nonNumeric {
-  text-align: left !important;
-}
-
-.numeric {
-  text-align: rigth !important;
-}
-
-.negative {
-  color: red;
-}
-
-.estimate {
-  color: darkgray !important;
-}
-
-.singleIndex {
-  padding-left: 15px !important;
-}
+.singleIndex { padding-left: 15px !important; }
 
 .subtotal {
   font-style: italic;
@@ -186,21 +135,6 @@ th.headerCell {
   margin: 4px;
 }
 
-/* -------------------------------------------------------------------------------------------- */
-/* ESTILOS PARA HIPERVÍNCULOS EN TABLE REPORT */
-/* -------------------------------------------------------------------------------------------- */
-
-.rowCell a {
-  color: #1A73E8;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.rowCell a:hover {
-  color: #1557B0;
-  text-decoration: underline;
-}
-
-.rowCell a:visited {
-  color: #7B1FA2;
-}
+/* ===================================================== */
+/* 🔥 FIX LOOKER HYPERLINKS (DRILL / LINKS)             */
+/
