@@ -159,18 +159,6 @@ th.headerCell {
     background-color: #d3d3d3;
 }
 
-/* ===== Hover (Amarillo Claro) ===== */
-.hover {
-    background-color: #ffffbb !important;
-}
-
-/* Aplica hover automático a filas y celdas */
-.reportTable tr:hover td,
-.reportTable tr:hover th {
-    background-color: #ffffbb !important;
-    cursor: pointer;
-}
-
 /* ===== Elementos Animados ===== */
 .rectElem.animated {
     margin: 4px;
