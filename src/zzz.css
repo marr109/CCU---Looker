@@ -92,6 +92,7 @@ th.headerCell {
 
 .headerCell.transposed.dimension {
   background-color: #64A70B;
+  color: #FFFF;
 }
 
 .headerCell.transposed.dimension.merged {
