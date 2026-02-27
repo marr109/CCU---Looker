@@ -141,10 +141,12 @@ th.headerCell {
 
 .indexCell.transposed.measure {
   background-color: #205C40 !important;
+  color: #FFF;
 }
 
 .indexCell.transposed.calculation {
   background-color: #205C40;
+  color: #FFF;
 }
 
 .indexCell.transposed.pivot.merged {
