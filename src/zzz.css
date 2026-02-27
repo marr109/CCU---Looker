@@ -7,13 +7,18 @@
   src: url('./fonts/noto-sans-sc-v11-latin_chinese-simplified-regular.woff2') format('woff2')
 }
 
+
 #tooltip {
     position: absolute;
     width: auto;
     height: auto;
     padding: 5px;
     background-color: white;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
     border-radius: 4px;
+    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
     pointer-events: none;
     font-family: sans-serif;
@@ -44,56 +49,77 @@
   font-family: Open Sans, Helvetica, Arial, Noto Sans TC, Noto Sans SC, sans-serif;
   color: #525252;
   border-collapse: collapse;
-  border-spacing: 0px;
+  /* Aumento el espaciado entre celdas si se usara `border-separate` */
+  /* border-spacing: 6px; */ 
+  border-spacing: 0px; /* Ya estaba en collapse, lo mantengo a 0 si es el caso */
 }
 
-/* ================= HEADER CELLS ================= */
+/* -------------------------------------------------------------------------------------------- */
+/* CAMBIOS PARA MAYOR ESPACIADO INTERNO (PADDING) */
+/* -------------------------------------------------------------------------------------------- */
 
 th.headerCell {
   background-color: #ccd8e4;
-  padding: 5px;
+  /* CAMBIO CLAVE: Aumento de 5px a 10px */
+  padding: 5px; 
   border-bottom: 1px solid #BDC3C7;
-  font-weight: normal; /* 🔥 evita bold global */
 }
 
-/* DIMENSIONES (bold permitido) */
 .headerCell.dimension {
   background-color: #64A70B;
   border-right: 1px solid #FFFFFF;
   color: #FFFFFF;
   text-align: center !important;
-  font-weight: bold;
 }
 
 .headerCell.pivot {
   background-color: #ccd8e4;
   border-right: 1px solid #BDC3C7; 
-  font-weight: normal;
 }
 
-/* MEDIDAS (sin bold) */
 .headerCell.measure {
-  background-color: #205C40;
+  background-color: #205C40; /* Verde Oscuro */
   border-left: 1px solid #BDC3C7;
   color: #FFFFFF;
   text-align: center !important;
   vertical-align: middle;
-  font-weight: normal;
 }
 
-/* CALCULATED MEASURE NORMAL (sin bold) */
 .headerCell.measure.calculation {
-  background-color: #64A70B;
-  color: #FFFFFF;
-  border-left: 1px solid #FFFFFF;
-  font-weight: normal;
+  background-color: #205C40;
+  border-left: 1px solid #BDC3C7;
 }
 
-/* ================= ROW CELLS ================= */
+.headerCell.transposed.dimension {
+  background-color: #e4ecf3;
+}
+
+.headerCell.transposed.dimension.merged {
+  background-color: #e4ecf3 !important;
+}
+
+/* .headerCell.dimension.headerRow {
+  background-color: #ccd8e4;
+  border-right: 1px solid #BDC3C7;
+}
+
+.headerCell.pivot.headerRow {
+  background-color: #ccd8e4;
+  border-right: 1px solid #BDC3C7;
+}
+
+.headerCell.measure.headerRow {
+  background-color: #ccd8e4;
+  border-left: 1px solid #BDC3C7;
+} */
+
+/* -------------------------------------------------------------------------------------------- */
+/* MODIFICACIÓN PARA AUMENTAR EL PADDING DE LAS CELDAS DE DATOS (.rowCell) */
+/* -------------------------------------------------------------------------------------------- */
 
 .rowCell {
-  vertical-align: middle;
-  padding: 8px 5px;
+  vertical-align: middle; /* Cambiado de 'super' a 'middle' para mejor alineación */
+  padding: 8px 5px; /* MODIFICACIÓN CLAVE: Aumentado el padding arriba/abajo */
   border-bottom: 1px solid #BDC3C7; 
 }
 
@@ -101,45 +127,48 @@ th.headerCell {
   background-color: #ffffff !important;
 }
 
-/* ================= INDEX CELLS ================= */
-
 .indexCell.transposed {
-  font-weight: bold; /* mantener jerarquía visual */
-}
-
-.indexCell.transposed.pivot {
-  background-color: #ccd8e4;
-}
-
-.indexCell.transposed.dimension {
-  background-color: #64A70B;
-  border-right: 1px solid #FFFFFF;
-  color: #FFFFFF;
   font-weight: bold;
 }
 
-/* MEDIDAS TRANSPUESTAS sin bold */
+.indexCell.transposed.pivot {
+  background-color: #64A70B !important;
+}
+
+.indexCell.transposed.dimension {
+  background-color: #64A70B !important;
+}
+
 .indexCell.transposed.measure {
-  background-color: #205C40;
-  color: #FFFFFF;
-  font-weight: normal;
+  background-color: #205C40 !important;
 }
 
-/* CALCULADAS TRANSPUESTAS sin bold */
 .indexCell.transposed.calculation {
-  background-color: #64A70B;
-  color: #FFFFFF;
-  font-weight: normal;
+  background-color: #c9dfc5;
 }
 
-/* ================= HELPERS ================= */
+.indexCell.transposed.pivot.merged {
+  background-color: #64A70B !important;
+}
+
+.indexCell.transposed.dimension.merged {
+  background-color: #64A70B !important;
+}
+
+.indexCell.transposed.measure.merged {
+  background-color: #205C40 !important;
+}
+
+.indexCell.transposed.calculation.merged {
+  background-color: #205C40 !important;
+}
 
 .nonNumeric {
-  text-align: center !important;
+  text-align: left !important;
 }
 
 .numeric {
-  text-align: center !important;
+  text-align: rigth !important;
 }
 
 .negative {
@@ -175,49 +204,3 @@ th.headerCell {
   margin: 4px;
 }
 
-/* ===================================================== */
-/* INVERTIR COLORES EN MODO TRANSPUESTO */
-/* ===================================================== */
-
-/* DIMENSION -> verde oscuro */
-.headerCell.transposed.dimension {
-  background-color: #205C40 !important;
-  color: #FFFFFF;
-  border-right: 1px solid #BDC3C7;
-  font-weight: bold;
-}
-
-/* MEASURE -> verde claro (sin bold) */
-.headerCell.transposed.measure {
-  background-color: #64A70B !important;
-  color: #FFFFFF;
-  border-left: 1px solid #FFFFFF;
-  font-weight: normal;
-}
-
-/* CALCULATED MEASURE TRANSPUESTO (sin bold) */
-.headerCell.transposed.measure.calculation {
-  background-color: #64A70B !important;
-  color: #FFFFFF !important;
-  border-left: 1px solid #FFFFFF;
-  font-weight: normal;
-}
-
-/* INDEX CELLS */
-.indexCell.transposed.dimension {
-  background-color: #205C40 !important;
-  color: #FFFFFF;
-  font-weight: bold;
-}
-
-.indexCell.transposed.measure {
-  background-color: #64A70B !important;
-  color: #FFFFFF;
-  font-weight: normal;
-}
-
-.indexCell.transposed.calculation {
-  background-color: #64A70B !important;
-  color: #FFFFFF !important;
-  font-weight: normal;
-}
