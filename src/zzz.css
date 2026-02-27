@@ -52,12 +52,12 @@ th.headerCell {
   color: #FFFFFF;
 }
 
-/* MÉTRICAS VERDE CLARO */
+/* MÉTRICAS GRIS CLARO */
 .headerCell.transposed.measure,
 .headerCell.transposed.calculation,
 .headerCell.transposed.pivot {
-  background-color: #64A70B;
-  color: #FFFFFF;
+  background-color: #d3d3d3;
+  color: #000000;
 }
 
 /* ================= DATA CELLS ================= */
@@ -81,12 +81,13 @@ th.headerCell {
   color: #FFFFFF;
 }
 
-/* MÉTRICAS VERDE CLARO */
+/* MÉTRICAS GRIS CLARO */
 .indexCell.transposed.pivot,
 .indexCell.transposed.measure,
 .indexCell.transposed.calculation {
-  background-color: #64A70B !important;
-  color: #FFFFFF;
+  background-color: #F7F7F7 !important;
+  color: #000000;
+  border-right: 1px solid #d3d3d3;
 }
 
 /* MERGED */
