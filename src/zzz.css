@@ -73,7 +73,7 @@ th.headerCell {
 }
 
 .headerCell.pivot {
-  background-color: #ccd8e4;
+  background-color: #64A70B;
   border-right: 1px solid #BDC3C7; 
 }
 
@@ -91,11 +91,11 @@ th.headerCell {
 }
 
 .headerCell.transposed.dimension {
-  background-color: #e4ecf3;
+  background-color: #64A70B;
 }
 
 .headerCell.transposed.dimension.merged {
-  background-color: #e4ecf3 !important;
+  bbackground-color: #64A70B;
 }
 
 /* .headerCell.dimension.headerRow {
