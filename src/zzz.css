@@ -7,23 +7,19 @@
   src: url('./fonts/noto-sans-sc-v11-latin_chinese-simplified-regular.woff2') format('woff2')
 }
 
-
 #tooltip {
     position: absolute;
     width: auto;
     height: auto;
     padding: 5px;
-    background-color: white;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
+    background-color: #F7F7F7;
     border-radius: 4px;
-    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
     pointer-events: none;
     font-family: sans-serif;
     font-size: 12px;
     z-index: 2;
+    color: #000;
 }
 
 .tooltipTable {
@@ -33,36 +29,25 @@
   table-layout: auto;
 }
 
-.focus {
-  font-weight: bold;
-}
+.focus { font-weight: bold; }
+.hidden { display: none; }
 
-.hidden {
-    display: none;
-}
-
-.hover {
-  background-color: #ffffbb;
-}
+.hover { background-color: #ffffbb; }
 
 .reportTable {
   font-family: Open Sans, Helvetica, Arial, Noto Sans TC, Noto Sans SC, sans-serif;
-  color: #525252;
+  color: #7a7a7a;
   border-collapse: collapse;
-  /* Aumento el espaciado entre celdas si se usara `border-separate` */
-  /* border-spacing: 6px; */ 
-  border-spacing: 0px; /* Ya estaba en collapse, lo mantengo a 0 si es el caso */
+  border-spacing: 0px;
 }
 
-/* -------------------------------------------------------------------------------------------- */
-/* CAMBIOS PARA MAYOR ESPACIADO INTERNO (PADDING) */
-/* -------------------------------------------------------------------------------------------- */
+/* ================= HEADERS ================= */
 
 th.headerCell {
-  background-color: #ccd8e4;
-  /* CAMBIO CLAVE: Aumento de 5px a 10px */
-  padding: 5px; 
-  border-bottom: 1px solid #BDC3C7;
+  background-color: #205C40;
+  padding: 5px;
+  border-bottom: 1px solid #d3d3d3;
+  color: #FFFFFF;
 }
 
 .headerCell.dimension {
@@ -74,12 +59,13 @@ th.headerCell {
 
 .headerCell.pivot {
   background-color: #64A70B;
-  border-right: 1px solid #BDC3C7; 
+  border-right: 1px solid #d3d3d3;
+  color: #FFFFFF;
 }
 
 .headerCell.measure {
-  background-color: #205C40; /* Verde Oscuro */
-  border-left: 1px solid #BDC3C7;
+  background-color: #205C40;
+  border-left: 1px solid #d3d3d3;
   color: #FFFFFF;
   text-align: center !important;
   vertical-align: middle;
@@ -87,123 +73,95 @@ th.headerCell {
 
 .headerCell.measure.calculation {
   background-color: #205C40;
-  border-left: 1px solid #BDC3C7;
+  border-left: 1px solid #d3d3d3;
 }
 
-.headerCell.transposed.dimension {
+/* ===== TRANSPOSED HEADERS ===== */
+
+.headerCell.transposed.dimension,
+.headerCell.transposed.measure,
+.headerCell.transposed.calculation,
+.headerCell.transposed.pivot {
   background-color: #64A70B;
-  color: #FFFF;
+  color: #FFFFFF;
 }
 
 .headerCell.transposed.dimension.merged {
-  bbackground-color: #64A70B;
+  background-color: #64A70B;
 }
 
-/* .headerCell.dimension.headerRow {
-  background-color: #ccd8e4;
-  border-right: 1px solid #BDC3C7;
-}
-
-.headerCell.pivot.headerRow {
-  background-color: #ccd8e4;
-  border-right: 1px solid #BDC3C7;
-}
-
-.headerCell.measure.headerRow {
-  background-color: #ccd8e4;
-  border-left: 1px solid #BDC3C7;
-} */
-
-/* -------------------------------------------------------------------------------------------- */
-/* MODIFICACIÓN PARA AUMENTAR EL PADDING DE LAS CELDAS DE DATOS (.rowCell) */
-/* -------------------------------------------------------------------------------------------- */
+/* ================= DATA CELLS ================= */
 
 .rowCell {
-  vertical-align: middle; /* Cambiado de 'super' a 'middle' para mejor alineación */
-  padding: 8px 5px; /* MODIFICACIÓN CLAVE: Aumentado el padding arriba/abajo */
-  border-bottom: 1px solid #BDC3C7; 
+  vertical-align: middle;
+  padding: 8px 5px;
+  border-bottom: 1px solid #d3d3d3;
+  background-color: #FFFFFF;
+  color: #7a7a7a;
 }
 
 .rowCell.merged {
-  background-color: #ffffff !important;
+  background-color: #F7F7F7 !important;
 }
+
+/* ================= TRANSPOSED INDEX ================= */
 
 .indexCell.transposed {
   font-weight: bold;
 }
 
-.indexCell.transposed.pivot {
-  background-color: #64A70B !important;
-}
-
-.indexCell.transposed.dimension {
-  background-color: #64A70B !important;
-}
-
-.indexCell.transposed.measure {
-  background-color: #205C40 !important;
-  color: #FFF;
-}
-
+/* Todos verdes claros como el segundo CSS */
+.indexCell.transposed.dimension,
+.indexCell.transposed.pivot,
+.indexCell.transposed.measure,
 .indexCell.transposed.calculation {
-  background-color: #205C40;
-  color: #FFF;
-}
-
-.indexCell.transposed.pivot.merged {
   background-color: #64A70B !important;
+  color: #FFFFFF;
 }
 
-.indexCell.transposed.dimension.merged {
-  background-color: #64A70B !important;
+.indexCell.transposed.merged {
+  background-color: #F7F7F7 !important;
+  color: #7a7a7a !important;
 }
 
-.indexCell.transposed.measure.merged {
-  background-color: #205C40 !important;
-}
+/* ================= ALIGNMENT ================= */
 
-.indexCell.transposed.calculation.merged {
-  background-color: #205C40 !important;
-}
+.nonNumeric { text-align: left !important; }
+.numeric { text-align: right !important; }
 
-.nonNumeric {
-  text-align: left !important;
-}
+/* ================= COLORS ================= */
 
-.numeric {
-  text-align: rigth !important;
-}
+.negative { color: #A6093D; }
 
-.negative {
-  color: red;
-}
+.estimate { color: #7a7a7a !important; }
 
-.estimate {
-  color: darkgray !important;
-}
+.singleIndex { padding-left: 15px !important; }
 
-.singleIndex {
-  padding-left: 15px !important;
-}
+/* ================= TOTALS ================= */
 
 .subtotal {
   font-style: italic;
   font-weight: bold;
-  background: #D3D3D3;
+  background: #d3d3d3;
+  color: #000000;
 }
 
 .total {
-  border-top: 2px solid #696969 !important;
+  border-top: 2px solid #000000 !important;
   font-weight: bold !important;
+  background-color: #F7F7F7;
+  color: #000000;
 }
 
 .total.transposed {
   border-top: 0px !important;
-  background: #D3D3D3;
+  background-color: #d3d3d3;
+  color: #000000;
 }
+
+/* ================= MISC ================= */
 
 .rectElem.animated {
   font-family: Open Sans,Helvetica,Arial,sans-serif;
   margin: 4px;
 }
-
