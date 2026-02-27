@@ -1,0 +1,178 @@
+/* ===== Tipografía Base ===== */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: #7a7a7a;
+    background-color: #F7F7F7;
+}
+
+h1.masterH1 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #205C40;
+    text-align: center;
+}
+
+h2.masterH2 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #64A70B;
+    text-align: center;
+}
+
+.masterHeader {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #145c9e;
+}
+
+/* ===== Tooltip ===== */
+#tooltip {
+    position: absolute;
+    padding: 5px;
+    background-color: #F7F7F7;
+    border-radius: 4px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: #000000;
+    z-index: 2;
+}
+
+/* ===== Tablas de Reporte ===== */
+.reportTable {
+    font-family: 'Helvetica Neue', Helvetica, Arial, Noto Sans TC, Noto Sans SC, sans-serif;
+    color: #7a7a7a;
+    border-collapse: collapse;
+    border-spacing: 3px;
+    width: 100%;
+    text-align: center;
+}
+
+/* ===== Encabezados Principales (Verde Oscuro) ===== */
+th.headerCell {
+    padding: 5px;
+    border-bottom: 1px solid #d3d3d3;
+    text-align: center;
+    font-weight: bold;
+    background-color: #205C40 !important;
+    color: #FFFFFF !important;
+}
+
+/* ===== Encabezados de Dimensiones (Verde Claro, alineados a la izquierda) ===== */
+.headerCell.dimension,
+.indexCell.transposed.dimension {
+    background-color: #64A70B;
+    color: #FFFFFF;
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* ===== Encabezados de Medidas (Verde Claro, con separación) ===== */
+.headerCell.measure,
+.indexCell.transposed.measure {
+    background-color: #64A70B;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 5px 10px;
+    border-left: 4px solid #F7F7F7;
+}
+
+/* ===== Encabezados de Cálculos (Verde Claro) ===== */
+.headerCell.calculation,
+.indexCell.transposed.calculation {
+    background-color: #64A70B;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+/* ===== Encabezados Pivot (Verde Claro) ===== */
+.headerCell.pivot,
+.indexCell.transposed.pivot {
+    background-color: #64A70B;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+/* ===== Celdas de Datos (Fondo Blanco) ===== */
+.rowCell, .numeric, .nonNumeric {
+    vertical-align: middle;
+    padding: 5px;
+    border-bottom: 1px solid #d3d3d3;
+    text-align: center;
+    background-color: #FFFFFF;
+    color: #7a7a7a;
+}
+
+/* ===== Celdas de Índice (Fondo Blanco, alineadas) ===== */
+.indexCell {
+    vertical-align: middle;
+    padding: 5px;
+    border-bottom: 1px solid #d3d3d3;
+    background-color: #FFFFFF;
+    color: #7a7a7a;
+    text-align: left;
+    padding-left: 15px;
+}
+
+/* ===== Celdas Fusionadas ===== */
+.rowCell.merged, .indexCell.transposed.merged {
+    background-color: #F7F7F7 !important;
+    color: #7a7a7a !important;
+}
+
+/* ===== Valores Negativos ===== */
+.negative {
+    color: #A6093D;
+}
+
+/* ===== Estimaciones ===== */
+.estimate {
+    color: #7a7a7a !important;
+}
+
+/* ===== Índice Simple ===== */
+.singleIndex {
+    padding-left: 15px !important;
+}
+
+/* ===== Subtotales ===== */
+.subtotal {
+    font-style: italic;
+    font-weight: bold;
+    background-color: #d3d3d3;
+    color: #000000;
+}
+
+/* ===== Totales ===== */
+.total {
+    border-top: 2px solid #000000 !important;
+    font-weight: bold !important;
+    background-color: #F7F7F7;
+    color: #000000;
+}
+
+.total.transposed {
+    border-top: 0px !important;
+    background-color: #d3d3d3;
+}
+
+/* ===== Hover (Amarillo Claro) ===== */
+.hover {
+    background-color: #ffffbb !important;
+}
+
+/* Aplica hover automático a filas y celdas */
+.reportTable tr:hover td,
+.reportTable tr:hover th {
+    background-color: #ffffbb !important;
+    cursor: pointer;
+}
+
+/* ===== Elementos Animados ===== */
+.rectElem.animated {
+    margin: 4px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
