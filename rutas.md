@@ -14,3 +14,8 @@ tabla para conjuntos:
 
 6.- https://rawcdn.githack.com/marr109/CCU---Looker/7700169056526b637ee91efd95a70cf0e9c77edb/src/zzz.css
 
+
+-- VENTAS CONSOLIDADAS
+
+
+https://rawcdn.githack.com/marr109/CCU---Looker/835193811f3775a0ca883b29eb0174d6b407acc5/src/ventas_consolidadas.css
